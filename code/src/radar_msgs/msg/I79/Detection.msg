@@ -1,0 +1,16 @@
+# detection
+uint16 measurement_id
+float32 azimuth_angle
+float32 azimuth_angle_std
+uint8 invalid_flags
+float32 elevation_angle
+float32 elevation_angle_std
+float32 range
+float32 range_std
+float32 range_rate
+float32 range_rate_std
+int8 rcs
+int8 snr
+uint8 positive_predictive_value
+uint8 classification
+uint8 ambiguity_flag

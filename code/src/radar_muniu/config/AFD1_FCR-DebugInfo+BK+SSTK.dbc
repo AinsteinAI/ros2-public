@@ -1,0 +1,2673 @@
+VERSION "2021_11_8_134215"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: FLC_FD3 SRR_FL SRR_FR MN_T79
+VAL_TABLE_ VtSiG_VCU5_ActGearValid 1 "Valid" 0 "Invalid" ;
+VAL_TABLE_ TargetTI_Status 7 "Extension: GENERAL_ERROR" 6 "Reserved6" 5 "TIMELEAP_PAST" 4 "TIMELEAP_FUTURE" 3 "GLOBAL_TIME_BASE" 2 "Reserved2" 1 "Reserved1" 0 "TIMEOUT" ;
+VAL_TABLE_ ObjMtnPat 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_TABLE_ ObjTyp 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_TABLE_ Radar_Status 3 "Dynamic Calibration running " 2 "Failure
+
+" 1 "block" 0 "No failure" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ PDCU1_Checksum : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDCU1_AliveCounter : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ DDCU1_Checksum : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ DDCU1_AliveCounter : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 992 FCVR_TBOX_Fr01_3E0: 8 FLC_FD3
+ SG_ TimeDspFmt : 46|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ SecsOfMinute : 45|6@0+ (1,0) [0|59] ""  SRR_FR,SRR_FL
+ SG_ MinuteOfHour : 37|6@0+ (1,0) [0|59] ""  SRR_FR,SRR_FL
+ SG_ HoursOfDay : 28|5@0+ (1,0) [0|23] ""  SRR_FR,SRR_FL
+ SG_ CalendarYear : 7|8@0+ (1,2000) [2000|2255] ""  SRR_FR,SRR_FL
+ SG_ CalendarMonth : 11|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+ SG_ CalendarDay : 20|5@0+ (1,0) [0|31] ""  SRR_FR,SRR_FL
+
+BO_ 2007 PhysicalResponse_FR: 8 SRR_FR
+ SG_ DiagResponse_FR : 7|64@0+ (1,0) [0|1] ""  FLC_FD3
+
+BO_ 2004 PhysicalResponse_FL: 8 SRR_FL
+ SG_ DiagResponse_FL : 7|64@0+ (1,0) [0|1] ""  FLC_FD3
+
+BO_ 1991 PhysicalRequest_FR: 8 FLC_FD3
+ SG_ PhyReq_FR : 7|64@0+ (1,0) [0|1] ""  SRR_FR
+
+BO_ 1988 PhysicalRequest_FL: 8 FLC_FD3
+ SG_ PhyReq_FL : 7|64@0+ (1,0) [0|1] ""  SRR_FL
+
+BO_ 2015 FunctionalRequest: 8 FLC_FD3
+ SG_ Functional_Req : 7|64@0+ (1,0) [0|1] ""  SRR_FL,SRR_FR
+
+BO_ 805 FCVR_ICU_Fr02_325: 8 FLC_FD3
+ SG_ ICU2_Odometer : 7|24@0+ (0.1,0) [0|1677721.4] "km"  SRR_FR,SRR_FL
+
+BO_ 860 FCVR_Sync_35C: 16 FLC_FD3
+ SG_ Type : 7|8@0+ (1,0) [0|40] ""  SRR_FR,SRR_FL
+ SG_ Time_Domain : 23|4@0+ (1,0) [0|65535] ""  SRR_FR,SRR_FL
+ SG_ SyncType : 26|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ SyncTime : 39|32@0+ (1,0) [0|4294967295] ""  SRR_FR,SRR_FL
+ SG_ Sequence_counter : 19|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+ SG_ reserved1 : 71|64@0+ (1,0) [0|0] ""  SRR_FR,SRR_FL
+ SG_ reserved : 31|5@0+ (1,0) [0|0] ""  SRR_FR,SRR_FL
+ SG_ Overflow_of_seconds : 25|2@0+ (1,0) [0|3] ""  SRR_FR,SRR_FL
+ SG_ CRC : 15|8@0+ (1,0) [0|255] ""  SRR_FR,SRR_FL
+
+BO_ 419 FCVR_PDCU_Fr01_1A3: 16 FLC_FD3
+ SG_ PDCU1_RRDoorAjar : 27|2@0+ (1,0) [0|3] ""  SRR_FR,SRR_FL
+ SG_ PDCU1_FRDoorAjar : 25|2@0+ (1,0) [0|3] ""  SRR_FR,SRR_FL
+
+BO_ 418 FCVR_DDCU_Fr01_1A2: 16 FLC_FD3
+ SG_ DDCU1_RLDoorAjar : 27|2@0+ (1,0) [0|3] ""  SRR_FR,SRR_FL
+ SG_ DDCU1_FLDoorAjar : 25|2@0+ (1,0) [0|3] ""  SRR_FR,SRR_FL
+
+BO_ 229 FCVR_IDB_Fr01_0E5: 8 FLC_FD3
+ SG_ IDB1_Fr01_MsgCounter : 51|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+ SG_ IDB1_Fr01_Checksum : 63|8@0+ (1,0) [0|255] ""  SRR_FR,SRR_FL
+ SG_ IDB1_BrakePedalAppliedV : 1|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ IDB1_BrakePedalApplied : 0|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+
+BO_ 486 FCVR_BDCS_Fr06_1E6: 16 FLC_FD3
+ SG_ BDCS6_FrontWiperSts : 18|3@0+ (1,0) [0|7] ""  SRR_FR,SRR_FL
+ SG_ BDCS6_FrontWiperParkPos : 15|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+
+BO_ 272 FCVR_BDCS_Fr01_110: 8 FLC_FD3
+ SG_ BDCS1_Checksum : 63|8@0+ (1,0) [0|255] ""  SRR_FR,SRR_FL
+ SG_ BDCS1_PowerMode : 1|2@0+ (1,0) [0|3] ""  SRR_FR,SRR_FL
+ SG_ BDCS1_MsgCounter : 51|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+
+BO_ 196 FCVR_ACU_Fr02_0C4: 8 FLC_FD3
+ SG_ ACU2_VehicleDynYawRateV : 24|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ ACU2_VehicleDynYawRate : 39|16@0+ (0.01,-180) [-180|180] "deg/s"  SRR_FR,SRR_FL
+ SG_ ACU2_MsgCounter : 51|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+ SG_ ACU2_LongAccSensorValueV : 28|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ ACU2_LongAccSensorValue : 23|11@0+ (0.02,-16) [-16|16] "m/s^2"  SRR_FR,SRR_FL
+ SG_ ACU2_LatAccSensorValueV : 12|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ ACU2_LatAccSensorValue : 7|11@0+ (0.02,-16) [-16|16] "m/s^2"  SRR_FR,SRR_FL
+ SG_ ACU2_Checksum : 63|8@0+ (1,0) [0|255] ""  SRR_FR,SRR_FL
+
+BO_ 199 FCVR_IDB_Fr04_0C7: 32 FLC_FD3
+ SG_ IDB4_RRWhlVelocityValid : 72|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ IDB4_RRWhlVelocity : 87|14@0+ (0.03125,0) [0|511.9375] "km/h"  SRR_FR,SRR_FL
+ SG_ IDB4_RLWhlVelocityValid : 73|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ IDB4_RLWhlVelocity : 71|14@0+ (0.03125,0) [0|511.9375] "km/h"  SRR_FR,SRR_FL
+ SG_ IDB4_MsgCounter : 51|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+ SG_ IDB4_FRWhlVelocityValid : 25|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ IDB4_FRWhlVelocity : 23|14@0+ (0.03125,0) [0|511.9375] "km/h"  SRR_FR,SRR_FL
+ SG_ IDB4_FLWhlVelocityValid : 9|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ IDB4_FLWhlVelocity : 7|14@0+ (0.03125,0) [0|511.9375] "km/h"  SRR_FR,SRR_FL
+ SG_ IDB4_Checksum : 63|8@0+ (1,0) [0|255] ""  SRR_FR,SRR_FL
+
+BO_ 197 FCVR_IDB_Fr03_0C5: 8 FLC_FD3
+ SG_ IDB3_VehicleSpdValid : 6|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ IDB3_VehicleSpd : 5|14@0+ (0.03125,0) [0|511.9375] "km/h"  SRR_FR,SRR_FL
+ SG_ IDB3_MsgCounter : 51|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+ SG_ IDB3_Checksum : 63|8@0+ (1,0) [0|255] ""  SRR_FR,SRR_FL
+
+BO_ 177 FCVR_EPS_Fr01_0B1: 8 FLC_FD3
+ SG_ EPS1_SteeringAngleValid : 8|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ EPS1_SteeringAngle : 23|16@0+ (0.0345,-780) [-780|780] "degree"  SRR_FR,SRR_FL
+ SG_ EPS1_SteerAngleSpdValid : 9|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ EPS1_SteerAngleSpd : 39|14@0+ (0.125,-1024) [-1024|1023.75] "deg/s"  SRR_FR,SRR_FL
+ SG_ EPS1_MsgCounter : 51|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+ SG_ EPS1_Checksum : 63|8@0+ (1,0) [0|255] ""  SRR_FR,SRR_FL
+
+BO_ 227 FCVR_VCU_Fr05_0E3: 8 FLC_FD3
+ SG_ VCU5_Checksum : 63|8@0+ (1,0) [0|255] ""  SRR_FR,SRR_FL
+ SG_ VCU5_AliveCounter : 51|4@0+ (1,0) [0|15] ""  SRR_FR,SRR_FL
+ SG_ VCU5_ActGearValid : 3|1@0+ (1,0) [0|1] ""  SRR_FR,SRR_FL
+ SG_ VCU5_ActGear : 2|3@0+ (1,0) [0|7] ""  SRR_FR,SRR_FL
+
+BO_ 856 SRR_FL_SGUObjPos_8: 64 SRR_FL
+ SG_ SRR_FL_ObjMtnPat_16 : 364|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_16 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_16 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_16 : 367|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_15 : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_15 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_15 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_15 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_15 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_15 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_15 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_15 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_15 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_15 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_15 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_15 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_15 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_15 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_15 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_15 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_15 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_15 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_15 : 183|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_15 : 180|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_16 : 191|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_16 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_16 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_16 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_16 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_16 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_16 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_16 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_16 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_16 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_16 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_16 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_16 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_16 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_16 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_16 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj8MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj8CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+
+BO_ 855 SRR_FL_SGUObjPos_7: 64 SRR_FL
+ SG_ SRR_FL_ObjMtnPat_14 : 364|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_14 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_14 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_14 : 367|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_13 : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_13 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_13 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_13 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_13 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_13 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_13 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_13 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_13 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_13 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_13 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_13 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_13 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_13 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_13 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_13 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_13 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_13 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_13 : 183|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_13 : 180|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_14 : 191|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_14 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_14 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_14 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_14 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_14 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_14 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_14 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_14 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_14 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_14 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_14 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_14 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_14 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_14 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_14 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj7MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj7CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+
+BO_ 854 SRR_FL_SGUObjPos_6: 64 SRR_FL
+ SG_ SRR_FL_ObjMtnPat_12 : 364|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_12 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_12 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_12 : 367|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_11 : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_11 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_11 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_11 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_11 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_11 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_11 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_11 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_11 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_11 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_11 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_11 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_11 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_11 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_11 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_11 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_11 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_11 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_11 : 183|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_11 : 180|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_12 : 191|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_12 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_12 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_12 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_12 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_12 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_12 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_12 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_12 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_12 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_12 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_12 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_12 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_12 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_12 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_12 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj6MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj6CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+
+BO_ 853 SRR_FL_SGUObjPos_5: 64 SRR_FL
+ SG_ SRR_FL_ObjMtnPat_10 : 364|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_10 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_10 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_10 : 367|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_9 : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_9 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_9 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_9 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_9 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_9 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_9 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_9 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_9 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_9 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_9 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_9 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_9 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_9 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_9 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_9 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_9 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_9 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_9 : 183|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_9 : 180|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_10 : 191|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_10 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_10 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_10 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_10 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_10 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_10 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_10 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_10 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_10 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_10 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_10 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_10 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_10 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_10 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_10 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj5MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj5CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+
+BO_ 848 FL_First_Frame: 64 SRR_FL
+ SG_ SRR_FL_NrObj : 79|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+ SG_ MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ Radar_Status : 87|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ Delay_Time : 47|32@0+ (0.1,0) [0|429496729.5] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_OBJTi_Stamp : 15|32@0+ (0.1,0) [0|429496729.5] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_TargetTI_Status : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+
+BO_ 849 SRR_FL_SGUObjPos_1: 64 SRR_FL
+ SG_ SRR_FL_ObjMtnPat_2 : 364|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_2 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_2 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_2 : 367|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_1 : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_1 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_1 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_1 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_1 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_1 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_1 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_1 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_1 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_1 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_1 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_1 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_1 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_1 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_1 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_1 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_1 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_1 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_1 : 183|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_1 : 180|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_2 : 191|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_2 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_2 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_2 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_2 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_2 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_2 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_2 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_2 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_2 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_2 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_2 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_2 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_2 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_2 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_2 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj1MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj1CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+
+BO_ 850 SRR_FL_SGUObjPos_2: 64 SRR_FL
+ SG_ SRR_FL_ObjMtnPat_4 : 364|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_4 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_4 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_4 : 367|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_3 : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_3 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_3 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_3 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_3 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_3 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_3 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_3 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_3 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_3 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_3 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_3 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_3 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_3 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_3 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_3 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_3 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_3 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_3 : 183|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_3 : 180|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_4 : 191|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_4 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_4 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_4 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_4 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_4 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_4 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_4 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_4 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_4 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_4 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_4 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_4 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_4 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_4 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_4 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj2MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj2CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+
+BO_ 851 SRR_FL_SGUObjPos_3: 64 SRR_FL
+ SG_ SRR_FL_ObjMtnPat_6 : 364|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_6 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_6 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_6 : 367|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_5 : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_5 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_5 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_5 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_5 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_5 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_5 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_5 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_5 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_5 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_5 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_5 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_5 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_5 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_5 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_5 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_5 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_5 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_5 : 183|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_5 : 180|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_6 : 191|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_6 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_6 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_6 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_6 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_6 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_6 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_6 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_6 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_6 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_6 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_6 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_6 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_6 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_6 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_6 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj3MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj3CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+
+BO_ 852 SRR_FL_SGUObjPos_4: 64 SRR_FL
+ SG_ SRR_FLObj4CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FLObj4MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_8 : 364|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_8 : 367|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_8 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_8 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_8 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_8 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_8 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_8 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_8 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_8 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_8 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_8 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_8 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_8 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_8 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_8 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_8 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_8 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_8 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_8 : 191|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjMtnPat_7 : 180|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjTyp_7 : 183|3@0+ (1,0) [0|7] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVyStdDe_7 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjVxStdDe_7 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDyStdDe_7 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDxStdDe_7 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxWidth_7 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxLength_7 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLat_7 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjBoxCenterLgt_7 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjHeading_7 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelY_7 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjAccelX_7 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelY_7 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjRelVelX_7 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistY_7 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjDistX_7 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjSNR_7 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjConf_7 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FR,FLC_FD3
+ SG_ SRR_FL_ObjID_7 : 7|8@0+ (1,0) [0|255] ""  SRR_FR,FLC_FD3
+
+BO_ 2028 FL_DebugInfo_bk_num: 64 MN_T79
+ SG_ FL_BkNum : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ FL_MsgCntTotal : 4|4@1+ (1,0) [0|15] "1" Vector__XXX
+ SG_ FL_MsgCnt : 0|4@1+ (1,0) [0|15] "1.0" Vector__XXX
+
+BO_ 824 SRR_FR_SGUObjPos_8: 64 SRR_FR
+ SG_ SRR_FR_ObjMtnPat_16 : 364|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_16 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_16 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_16 : 367|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_15 : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_15 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_15 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_15 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_15 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_15 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_15 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_15 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_15 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_15 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_15 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_15 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_15 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_15 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_15 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_15 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_15 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_15 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_15 : 183|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_15 : 180|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_16 : 191|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_16 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_16 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_16 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_16 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_16 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_16 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_16 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_16 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_16 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_16 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_16 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_16 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_16 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_16 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_16 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj8MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj8CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+
+BO_ 823 SRR_FR_SGUObjPos_7: 64 SRR_FR
+ SG_ SRR_FR_ObjMtnPat_14 : 364|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_14 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_14 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_14 : 367|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_13 : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_13 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_13 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_13 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_13 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_13 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_13 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_13 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_13 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_13 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_13 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_13 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_13 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_13 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_13 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_13 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_13 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_13 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_13 : 183|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_13 : 180|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_14 : 191|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_14 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_14 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_14 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_14 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_14 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_14 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_14 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_14 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_14 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_14 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_14 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_14 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_14 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_14 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_14 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj7MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj7CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+
+BO_ 822 SRR_FR_SGUObjPos_6: 64 SRR_FR
+ SG_ SRR_FR_ObjMtnPat_12 : 364|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_12 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_12 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_12 : 367|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_11 : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_11 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_11 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_11 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_11 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_11 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_11 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_11 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_11 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_11 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_11 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_11 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_11 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_11 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_11 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_11 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_11 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_11 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_11 : 183|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_11 : 180|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_12 : 191|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_12 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_12 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_12 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_12 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_12 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_12 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_12 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_12 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_12 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_12 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_12 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_12 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_12 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_12 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_12 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj6MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj6CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+
+BO_ 821 SRR_FR_SGUObjPos_5: 64 SRR_FR
+ SG_ SRR_FR_ObjMtnPat_10 : 364|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_10 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_10 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_10 : 367|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_9 : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_9 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_9 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_9 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_9 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_9 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_9 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_9 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_9 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_9 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_9 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_9 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_9 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_9 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_9 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_9 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_9 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_9 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_9 : 183|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_9 : 180|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_10 : 191|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_10 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_10 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_10 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_10 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_10 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_10 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_10 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_10 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_10 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_10 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_10 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_10 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_10 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_10 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_10 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj5MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj5CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+
+BO_ 816 FR_First_Frame: 64 SRR_FR
+ SG_ SRR_FR_NrObj : 79|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+ SG_ MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ Radar_Status : 87|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ Delay_Time : 47|32@0+ (0.1,0) [0|429496729.5] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_OBJTi_Stamp : 15|32@0+ (0.1,0) [0|429496729.5] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_TargetTI_Status : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+
+BO_ 817 SRR_FR_SGUObjPos_1: 64 SRR_FR
+ SG_ SRR_FR_ObjMtnPat_2 : 364|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_2 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_2 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_2 : 367|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_1 : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_1 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_1 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_1 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_1 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_1 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_1 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_1 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_1 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_1 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_1 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_1 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_1 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_1 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_1 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_1 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_1 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_1 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_1 : 183|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_1 : 180|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_2 : 191|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_2 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_2 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_2 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_2 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_2 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_2 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_2 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_2 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_2 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_2 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_2 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_2 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_2 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_2 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_2 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj1MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj1CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+
+BO_ 818 SRR_FR_SGUObjPos_2: 64 SRR_FR
+ SG_ SRR_FR_ObjMtnPat_4 : 364|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_4 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_4 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_4 : 367|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_3 : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_3 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_3 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_3 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_3 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_3 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_3 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_3 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_3 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_3 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_3 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_3 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_3 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_3 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_3 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_3 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_3 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_3 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_3 : 183|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_3 : 180|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_4 : 191|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_4 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_4 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_4 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_4 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_4 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_4 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_4 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_4 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_4 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_4 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_4 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_4 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_4 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_4 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_4 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj2MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj2CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+
+BO_ 819 SRR_FR_SGUObjPos_3: 64 SRR_FR
+ SG_ SRR_FR_ObjMtnPat_6 : 364|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_6 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_6 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_6 : 367|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_5 : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_5 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_5 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_5 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_5 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_5 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_5 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_5 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_5 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_5 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_5 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_5 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_5 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_5 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_5 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_5 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_5 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_5 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_5 : 183|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_5 : 180|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_6 : 191|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_6 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_6 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_6 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_6 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_6 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_6 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_6 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_6 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_6 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_6 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_6 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_6 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_6 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_6 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_6 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj3MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj3CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+
+BO_ 820 SRR_FR_SGUObjPos_4: 64 SRR_FR
+ SG_ SRR_FRObj4CRC16Checksum : 503|16@0+ (1,0) [0|65535] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FRObj4MsgCounter : 491|4@0+ (1,0) [0|15] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_8 : 364|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_8 : 367|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_8 : 358|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_8 : 348|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_8 : 332|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_8 : 340|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_8 : 325|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_8 : 318|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_8 : 311|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_8 : 288|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_8 : 284|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_8 : 264|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_8 : 260|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_8 : 240|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_8 : 218|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_8 : 238|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_8 : 214|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_8 : 193|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_8 : 199|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_8 : 191|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjMtnPat_7 : 180|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjTyp_7 : 183|3@0+ (1,0) [0|7] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVyStdDe_7 : 174|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjVxStdDe_7 : 164|6@0+ (0.05,0) [0|2] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDyStdDe_7 : 148|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDxStdDe_7 : 156|8@0+ (0.05,0) [0|12.7] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxWidth_7 : 141|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxLength_7 : 134|9@0+ (0.1,0) [0|50] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLat_7 : 127|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjBoxCenterLgt_7 : 104|9@0+ (0.1,-25) [-25|25] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjHeading_7 : 100|12@0+ (0.1,-180) [-180|180] "deg"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelY_7 : 80|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjAccelX_7 : 76|12@0+ (0.03125,-16) [-16|15] "mps2"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelY_7 : 56|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjRelVelX_7 : 34|12@0+ (0.0625,-128) [-128|127] "mps"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistY_7 : 54|14@0+ (0.015625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjDistX_7 : 30|12@0+ (0.0625,-128) [-128|127] "m"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjSNR_7 : 9|11@0+ (0.0625,0) [0|40] "db"  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjConf_7 : 15|6@0+ (0.015625,0) [0|0.984375] ""  SRR_FL,FLC_FD3
+ SG_ SRR_FR_ObjID_7 : 7|8@0+ (1,0) [0|255] ""  SRR_FL,FLC_FD3
+
+BO_ 2029 FR_DebugInfo_bk_num: 64 MN_T79
+ SG_ FR_MsgCntTotal : 4|4@1+ (1,0) [0|15] "1" Vector__XXX
+ SG_ FR_MsgCnt : 0|4@1+ (1,0) [0|15] "1.0" Vector__XXX
+ SG_ FR_BkNum : 16|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2025 Targets_FR_BK: 64 MN_T79
+ SG_ FR_azm_8 : 501|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FR_rng_8 : 460|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FR_snr_8 : 452|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FR_vlc_8 : 479|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FR_vlc_7 : 415|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FR_vlc_6 : 351|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FR_vlc_5 : 287|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FR_snr_7 : 388|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FR_snr_6 : 324|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FR_snr_5 : 260|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FR_rng_7 : 396|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FR_rng_6 : 332|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FR_azm_7 : 437|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FR_rng_5 : 268|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FR_azm_6 : 373|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FR_azm_5 : 309|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FR_vlc_4 : 223|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FR_vlc_3 : 159|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FR_vlc_2 : 95|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FR_vlc_1 : 31|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FR_rng_4 : 204|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FR_rng_3 : 140|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FR_rng_2 : 76|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FR_rng_1 : 12|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FR_snr_4 : 196|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FR_snr_3 : 132|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FR_snr_2 : 68|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FR_snr_1 : 4|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FR_azm_4 : 245|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FR_azm_3 : 181|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FR_azm_2 : 117|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FR_azm_1 : 53|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+
+BO_ 2024 Targets_FL_BK: 64 MN_T79
+ SG_ FL_rng_8 : 460|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FL_snr_8 : 452|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FL_vlc_8 : 479|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FL_azm_8 : 501|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FL_vlc_7 : 415|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FL_vlc_6 : 351|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FL_vlc_5 : 287|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FL_snr_7 : 388|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FL_snr_6 : 324|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FL_snr_5 : 260|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FL_rng_7 : 396|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FL_rng_6 : 332|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FL_rng_5 : 268|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FL_azm_7 : 437|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FL_azm_6 : 373|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FL_azm_5 : 309|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FL_azm_3 : 181|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FL_azm_2 : 117|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FL_azm_1 : 53|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FL_vlc_4 : 223|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FL_vlc_3 : 159|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FL_vlc_2 : 95|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FL_rng_4 : 204|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FL_rng_3 : 140|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FL_rng_2 : 76|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FL_snr_4 : 196|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FL_snr_3 : 132|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FL_snr_2 : 68|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+ SG_ FL_azm_4 : 245|14@0+ (0.0125,-102.39375) [-102.39375|102.39375] "deg" Vector__XXX
+ SG_ FL_vlc_1 : 31|13@0+ (0.02,-81.92) [-81.92|81.9] "m/s" Vector__XXX
+ SG_ FL_rng_1 : 12|13@0+ (0.02,0) [0|163.82] "m" Vector__XXX
+ SG_ FL_snr_1 : 4|6@0+ (1.25,0) [0|78.75] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 860 Type "帧类型";
+CM_ SG_ 860 Time_Domain "时钟编号";
+CM_ SG_ 860 SyncType "同步类型";
+CM_ SG_ 860 SyncTime "同步时间值";
+CM_ SG_ 860 Sequence_counter "帧序号";
+CM_ SG_ 860 reserved1 "保留位";
+CM_ SG_ 860 reserved "保留位";
+CM_ SG_ 860 Overflow_of_seconds "秒溢出计数";
+CM_ SG_ 860 CRC "帧计数";
+CM_ SG_ 856 SRR_FL_ObjMtnPat_16 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 856 SRR_FL_ObjVyStdDe_16 "Lateral speed standard deviation";
+CM_ SG_ 856 SRR_FL_ObjVxStdDe_16 "Longitudinal speed standard deviation";
+CM_ SG_ 856 SRR_FL_ObjTyp_16 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 856 SRR_FL_ObjID_15 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 856 SRR_FL_ObjConf_15 "The probability of an object to exist in reality";
+CM_ SG_ 856 SRR_FL_ObjSNR_15 "Signal noise ratio";
+CM_ SG_ 856 SRR_FL_ObjDistX_15 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 856 SRR_FL_ObjDistY_15 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 856 SRR_FL_ObjRelVelX_15 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 856 SRR_FL_ObjRelVelY_15 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 856 SRR_FL_ObjAccelX_15 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 856 SRR_FL_ObjAccelY_15 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 856 SRR_FL_ObjHeading_15 "Heading angle";
+CM_ SG_ 856 SRR_FL_ObjBoxCenterLgt_15 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 856 SRR_FL_ObjBoxCenterLat_15 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 856 SRR_FL_ObjBoxLength_15 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 856 SRR_FL_ObjDxStdDe_15 "Longitudinal position standard deviation";
+CM_ SG_ 856 SRR_FL_ObjBoxWidth_15 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 856 SRR_FL_ObjDyStdDe_15 "Lateral position standard deviation";
+CM_ SG_ 856 SRR_FL_ObjVxStdDe_15 "Longitudinal speed standard deviation";
+CM_ SG_ 856 SRR_FL_ObjVyStdDe_15 "Lateral speed standard deviation";
+CM_ SG_ 856 SRR_FL_ObjTyp_15 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 856 SRR_FL_ObjMtnPat_15 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 856 SRR_FL_ObjID_16 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 856 SRR_FL_ObjConf_16 "The probability of an object to exist in reality";
+CM_ SG_ 856 SRR_FL_ObjDistX_16 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 856 SRR_FL_ObjSNR_16 "Signal noise ratio";
+CM_ SG_ 856 SRR_FL_ObjDistY_16 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 856 SRR_FL_ObjRelVelX_16 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 856 SRR_FL_ObjRelVelY_16 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 856 SRR_FL_ObjAccelX_16 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 856 SRR_FL_ObjAccelY_16 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 856 SRR_FL_ObjHeading_16 "Heading angle";
+CM_ SG_ 856 SRR_FL_ObjBoxCenterLgt_16 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 856 SRR_FL_ObjBoxLength_16 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 856 SRR_FL_ObjBoxCenterLat_16 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 856 SRR_FL_ObjBoxWidth_16 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 856 SRR_FL_ObjDxStdDe_16 "Longitudinal position standard deviation";
+CM_ SG_ 856 SRR_FL_ObjDyStdDe_16 "Lateral position standard deviation";
+CM_ SG_ 856 SRR_FLObj8MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 856 SRR_FLObj8CRC16Checksum "CRC16";
+CM_ SG_ 855 SRR_FL_ObjMtnPat_14 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 855 SRR_FL_ObjVyStdDe_14 "Lateral speed standard deviation";
+CM_ SG_ 855 SRR_FL_ObjVxStdDe_14 "Longitudinal speed standard deviation";
+CM_ SG_ 855 SRR_FL_ObjTyp_14 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 855 SRR_FL_ObjID_13 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 855 SRR_FL_ObjConf_13 "The probability of an object to exist in reality";
+CM_ SG_ 855 SRR_FL_ObjSNR_13 "Signal noise ratio";
+CM_ SG_ 855 SRR_FL_ObjDistX_13 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 855 SRR_FL_ObjDistY_13 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 855 SRR_FL_ObjRelVelX_13 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 855 SRR_FL_ObjRelVelY_13 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 855 SRR_FL_ObjAccelX_13 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 855 SRR_FL_ObjAccelY_13 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 855 SRR_FL_ObjHeading_13 "Heading angle";
+CM_ SG_ 855 SRR_FL_ObjBoxCenterLgt_13 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 855 SRR_FL_ObjBoxCenterLat_13 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 855 SRR_FL_ObjBoxLength_13 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 855 SRR_FL_ObjDxStdDe_13 "Longitudinal position standard deviation";
+CM_ SG_ 855 SRR_FL_ObjBoxWidth_13 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 855 SRR_FL_ObjDyStdDe_13 "Lateral position standard deviation";
+CM_ SG_ 855 SRR_FL_ObjVxStdDe_13 "Longitudinal speed standard deviation";
+CM_ SG_ 855 SRR_FL_ObjVyStdDe_13 "Lateral speed standard deviation";
+CM_ SG_ 855 SRR_FL_ObjTyp_13 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 855 SRR_FL_ObjMtnPat_13 "0x0:unknown
+0x1:staty
+0x2:StatyFromMovg
+0x3:moving";
+CM_ SG_ 855 SRR_FL_ObjID_14 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 855 SRR_FL_ObjConf_14 "The probability of an object to exist in reality";
+CM_ SG_ 855 SRR_FL_ObjDistX_14 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 855 SRR_FL_ObjSNR_14 "Signal noise ratio";
+CM_ SG_ 855 SRR_FL_ObjDistY_14 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 855 SRR_FL_ObjRelVelX_14 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 855 SRR_FL_ObjRelVelY_14 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 855 SRR_FL_ObjAccelX_14 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 855 SRR_FL_ObjAccelY_14 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 855 SRR_FL_ObjHeading_14 "Heading angle";
+CM_ SG_ 855 SRR_FL_ObjBoxCenterLgt_14 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 855 SRR_FL_ObjBoxLength_14 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 855 SRR_FL_ObjBoxCenterLat_14 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 855 SRR_FL_ObjBoxWidth_14 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 855 SRR_FL_ObjDxStdDe_14 "Longitudinal position standard deviation";
+CM_ SG_ 855 SRR_FL_ObjDyStdDe_14 "Lateral position standard deviation";
+CM_ SG_ 855 SRR_FLObj7MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 855 SRR_FLObj7CRC16Checksum "CRC16";
+CM_ SG_ 854 SRR_FL_ObjMtnPat_12 "0x0:unknown
+0x1:staty
+0x2:StatyFromMovg
+0x3:moving";
+CM_ SG_ 854 SRR_FL_ObjVyStdDe_12 "Lateral speed standard deviation";
+CM_ SG_ 854 SRR_FL_ObjVxStdDe_12 "Longitudinal speed standard deviation";
+CM_ SG_ 854 SRR_FL_ObjTyp_12 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 854 SRR_FL_ObjID_11 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 854 SRR_FL_ObjConf_11 "The probability of an object to exist in reality";
+CM_ SG_ 854 SRR_FL_ObjSNR_11 "Signal noise ratio";
+CM_ SG_ 854 SRR_FL_ObjDistX_11 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 854 SRR_FL_ObjDistY_11 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 854 SRR_FL_ObjRelVelX_11 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 854 SRR_FL_ObjRelVelY_11 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 854 SRR_FL_ObjAccelX_11 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 854 SRR_FL_ObjAccelY_11 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 854 SRR_FL_ObjHeading_11 "Heading angle";
+CM_ SG_ 854 SRR_FL_ObjBoxCenterLgt_11 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 854 SRR_FL_ObjBoxCenterLat_11 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 854 SRR_FL_ObjBoxLength_11 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 854 SRR_FL_ObjDxStdDe_11 "Longitudinal position standard deviation";
+CM_ SG_ 854 SRR_FL_ObjBoxWidth_11 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 854 SRR_FL_ObjDyStdDe_11 "Lateral position standard deviation";
+CM_ SG_ 854 SRR_FL_ObjVxStdDe_11 "Longitudinal speed standard deviation";
+CM_ SG_ 854 SRR_FL_ObjVyStdDe_11 "Lateral speed standard deviation";
+CM_ SG_ 854 SRR_FL_ObjTyp_11 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 854 SRR_FL_ObjMtnPat_11 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 854 SRR_FL_ObjID_12 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 854 SRR_FL_ObjConf_12 "The probability of an object to exist in reality";
+CM_ SG_ 854 SRR_FL_ObjDistX_12 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 854 SRR_FL_ObjSNR_12 "Signal noise ratio";
+CM_ SG_ 854 SRR_FL_ObjDistY_12 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 854 SRR_FL_ObjRelVelX_12 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 854 SRR_FL_ObjRelVelY_12 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 854 SRR_FL_ObjAccelX_12 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 854 SRR_FL_ObjAccelY_12 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 854 SRR_FL_ObjHeading_12 "Heading angle";
+CM_ SG_ 854 SRR_FL_ObjBoxCenterLgt_12 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 854 SRR_FL_ObjBoxLength_12 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 854 SRR_FL_ObjBoxCenterLat_12 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 854 SRR_FL_ObjBoxWidth_12 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 854 SRR_FL_ObjDxStdDe_12 "Longitudinal position standard deviation";
+CM_ SG_ 854 SRR_FL_ObjDyStdDe_12 "Lateral position standard deviation";
+CM_ SG_ 854 SRR_FLObj6MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 854 SRR_FLObj6CRC16Checksum "CRC16";
+CM_ SG_ 853 SRR_FL_ObjMtnPat_10 "0x0:unknown
+0x1:staty
+0x2:StatyFromMovg
+0x3:moving";
+CM_ SG_ 853 SRR_FL_ObjVyStdDe_10 "Lateral speed standard deviation";
+CM_ SG_ 853 SRR_FL_ObjVxStdDe_10 "Longitudinal speed standard deviation";
+CM_ SG_ 853 SRR_FL_ObjTyp_10 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 853 SRR_FL_ObjID_9 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 853 SRR_FL_ObjConf_9 "The probability of an object to exist in reality";
+CM_ SG_ 853 SRR_FL_ObjSNR_9 "Signal noise ratio";
+CM_ SG_ 853 SRR_FL_ObjDistX_9 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 853 SRR_FL_ObjDistY_9 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 853 SRR_FL_ObjRelVelX_9 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 853 SRR_FL_ObjRelVelY_9 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 853 SRR_FL_ObjAccelX_9 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 853 SRR_FL_ObjAccelY_9 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 853 SRR_FL_ObjHeading_9 "Heading angle";
+CM_ SG_ 853 SRR_FL_ObjBoxCenterLgt_9 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 853 SRR_FL_ObjBoxCenterLat_9 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 853 SRR_FL_ObjBoxLength_9 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 853 SRR_FL_ObjDxStdDe_9 "Longitudinal position standard deviation";
+CM_ SG_ 853 SRR_FL_ObjBoxWidth_9 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 853 SRR_FL_ObjDyStdDe_9 "Lateral position standard deviation";
+CM_ SG_ 853 SRR_FL_ObjVxStdDe_9 "Longitudinal speed standard deviation";
+CM_ SG_ 853 SRR_FL_ObjVyStdDe_9 "Lateral speed standard deviation";
+CM_ SG_ 853 SRR_FL_ObjTyp_9 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 853 SRR_FL_ObjMtnPat_9 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 853 SRR_FL_ObjID_10 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 853 SRR_FL_ObjConf_10 "The probability of an object to exist in reality";
+CM_ SG_ 853 SRR_FL_ObjDistX_10 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 853 SRR_FL_ObjSNR_10 "Signal noise ratio";
+CM_ SG_ 853 SRR_FL_ObjDistY_10 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 853 SRR_FL_ObjRelVelX_10 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 853 SRR_FL_ObjRelVelY_10 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 853 SRR_FL_ObjAccelX_10 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 853 SRR_FL_ObjAccelY_10 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 853 SRR_FL_ObjHeading_10 "Heading angle";
+CM_ SG_ 853 SRR_FL_ObjBoxCenterLgt_10 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 853 SRR_FL_ObjBoxLength_10 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 853 SRR_FL_ObjBoxCenterLat_10 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 853 SRR_FL_ObjBoxWidth_10 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 853 SRR_FL_ObjDxStdDe_10 "Longitudinal position standard deviation";
+CM_ SG_ 853 SRR_FL_ObjDyStdDe_10 "Lateral position standard deviation";
+CM_ SG_ 853 SRR_FLObj5MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 853 SRR_FLObj5CRC16Checksum "CRC16";
+CM_ SG_ 848 SRR_FL_NrObj "Target number";
+CM_ SG_ 848 CRC16Checksum "CRC16";
+CM_ SG_ 848 MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 848 Radar_Status "bit 0：被遮挡
+bit 1：雷达内部故障
+bit 2：外部故障
+bit 3：动态标定中";
+CM_ SG_ 848 SRR_FL_OBJTi_Stamp "Object timestamp";
+CM_ SG_ 848 SRR_FL_TargetTI_Status "Bit 0: TIMEOUT
+Bit 1: Reserved1
+Bit 2: Reserved2
+Bit 3: GLOBAL_TIME_BASE
+Bit 4: TIMELEAP_FUTURE
+Bit 5: TIMELEAP_PAST
+Bit 6: Reserved6
+Bit 7: Extension: GENERAL_ERROR";
+CM_ SG_ 849 SRR_FL_ObjMtnPat_2 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 849 SRR_FL_ObjVyStdDe_2 "Lateral speed standard deviation";
+CM_ SG_ 849 SRR_FL_ObjVxStdDe_2 "Longitudinal speed standard deviation";
+CM_ SG_ 849 SRR_FL_ObjTyp_2 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 849 SRR_FL_ObjID_1 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 849 SRR_FL_ObjConf_1 "The probability of an object to exist in reality";
+CM_ SG_ 849 SRR_FL_ObjSNR_1 "Signal noise ratio";
+CM_ SG_ 849 SRR_FL_ObjDistX_1 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 849 SRR_FL_ObjDistY_1 "Position of target vehicle in y-direction（目标最近点的横向距离）";
+CM_ SG_ 849 SRR_FL_ObjRelVelX_1 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 849 SRR_FL_ObjRelVelY_1 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 849 SRR_FL_ObjAccelX_1 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 849 SRR_FL_ObjAccelY_1 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 849 SRR_FL_ObjHeading_1 "Heading angle";
+CM_ SG_ 849 SRR_FL_ObjBoxCenterLgt_1 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 849 SRR_FL_ObjBoxCenterLat_1 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 849 SRR_FL_ObjBoxLength_1 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 849 SRR_FL_ObjDxStdDe_1 "Longitudinal position standard deviation";
+CM_ SG_ 849 SRR_FL_ObjBoxWidth_1 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 849 SRR_FL_ObjDyStdDe_1 "Lateral position standard deviation";
+CM_ SG_ 849 SRR_FL_ObjVxStdDe_1 "Longitudinal speed standard deviation";
+CM_ SG_ 849 SRR_FL_ObjVyStdDe_1 "Lateral speed standard deviation";
+CM_ SG_ 849 SRR_FL_ObjTyp_1 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 849 SRR_FL_ObjMtnPat_1 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 849 SRR_FL_ObjID_2 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 849 SRR_FL_ObjConf_2 "The probability of an object to exist in reality";
+CM_ SG_ 849 SRR_FL_ObjDistX_2 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 849 SRR_FL_ObjSNR_2 "Signal noise ratio";
+CM_ SG_ 849 SRR_FL_ObjDistY_2 "Position of target vehicle in y-direction（目标最近点的横向距离）";
+CM_ SG_ 849 SRR_FL_ObjRelVelX_2 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 849 SRR_FL_ObjRelVelY_2 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 849 SRR_FL_ObjAccelX_2 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 849 SRR_FL_ObjAccelY_2 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 849 SRR_FL_ObjHeading_2 "Heading angle";
+CM_ SG_ 849 SRR_FL_ObjBoxCenterLgt_2 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 849 SRR_FL_ObjBoxLength_2 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 849 SRR_FL_ObjBoxCenterLat_2 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 849 SRR_FL_ObjBoxWidth_2 "长方体宽度  (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 849 SRR_FL_ObjDxStdDe_2 "Longitudinal position standard deviation";
+CM_ SG_ 849 SRR_FL_ObjDyStdDe_2 "Lateral position standard deviation";
+CM_ SG_ 849 SRR_FLObj1MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 849 SRR_FLObj1CRC16Checksum "CRC16";
+CM_ SG_ 850 SRR_FL_ObjMtnPat_4 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 850 SRR_FL_ObjVyStdDe_4 "Lateral speed standard deviation";
+CM_ SG_ 850 SRR_FL_ObjVxStdDe_4 "Longitudinal speed standard deviation";
+CM_ SG_ 850 SRR_FL_ObjTyp_4 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 850 SRR_FL_ObjID_3 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 850 SRR_FL_ObjConf_3 "The probability of an object to exist in reality";
+CM_ SG_ 850 SRR_FL_ObjSNR_3 "Signal noise ratio";
+CM_ SG_ 850 SRR_FL_ObjDistX_3 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 850 SRR_FL_ObjDistY_3 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 850 SRR_FL_ObjRelVelX_3 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 850 SRR_FL_ObjRelVelY_3 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 850 SRR_FL_ObjAccelX_3 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 850 SRR_FL_ObjAccelY_3 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 850 SRR_FL_ObjHeading_3 "Heading angle";
+CM_ SG_ 850 SRR_FL_ObjBoxCenterLgt_3 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 850 SRR_FL_ObjBoxCenterLat_3 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 850 SRR_FL_ObjBoxLength_3 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 850 SRR_FL_ObjDxStdDe_3 "Longitudinal position standard deviation";
+CM_ SG_ 850 SRR_FL_ObjBoxWidth_3 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 850 SRR_FL_ObjDyStdDe_3 "Lateral position standard deviation";
+CM_ SG_ 850 SRR_FL_ObjVxStdDe_3 "Longitudinal speed standard deviation";
+CM_ SG_ 850 SRR_FL_ObjVyStdDe_3 "Lateral speed standard deviation";
+CM_ SG_ 850 SRR_FL_ObjTyp_3 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 850 SRR_FL_ObjMtnPat_3 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 850 SRR_FL_ObjID_4 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 850 SRR_FL_ObjConf_4 "The probability of an object to exist in reality";
+CM_ SG_ 850 SRR_FL_ObjDistX_4 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 850 SRR_FL_ObjSNR_4 "Signal noise ratio";
+CM_ SG_ 850 SRR_FL_ObjDistY_4 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 850 SRR_FL_ObjRelVelX_4 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 850 SRR_FL_ObjRelVelY_4 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 850 SRR_FL_ObjAccelX_4 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 850 SRR_FL_ObjAccelY_4 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 850 SRR_FL_ObjHeading_4 "Heading angle";
+CM_ SG_ 850 SRR_FL_ObjBoxCenterLgt_4 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 850 SRR_FL_ObjBoxLength_4 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 850 SRR_FL_ObjBoxCenterLat_4 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 850 SRR_FL_ObjBoxWidth_4 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 850 SRR_FL_ObjDxStdDe_4 "Longitudinal position standard deviation";
+CM_ SG_ 850 SRR_FL_ObjDyStdDe_4 "Lateral position standard deviation";
+CM_ SG_ 850 SRR_FLObj2MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 850 SRR_FLObj2CRC16Checksum "CRC16";
+CM_ SG_ 851 SRR_FL_ObjMtnPat_6 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 851 SRR_FL_ObjVyStdDe_6 "Lateral speed standard deviation";
+CM_ SG_ 851 SRR_FL_ObjVxStdDe_6 "Longitudinal speed standard deviation";
+CM_ SG_ 851 SRR_FL_ObjTyp_6 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 851 SRR_FL_ObjID_5 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 851 SRR_FL_ObjConf_5 "The probability of an object to exist in reality";
+CM_ SG_ 851 SRR_FL_ObjSNR_5 "Signal noise ratio";
+CM_ SG_ 851 SRR_FL_ObjDistX_5 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 851 SRR_FL_ObjDistY_5 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 851 SRR_FL_ObjRelVelX_5 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 851 SRR_FL_ObjRelVelY_5 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 851 SRR_FL_ObjAccelX_5 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 851 SRR_FL_ObjAccelY_5 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 851 SRR_FL_ObjHeading_5 "Heading angle";
+CM_ SG_ 851 SRR_FL_ObjBoxCenterLgt_5 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 851 SRR_FL_ObjBoxCenterLat_5 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 851 SRR_FL_ObjBoxLength_5 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 851 SRR_FL_ObjDxStdDe_5 "Longitudinal position standard deviation";
+CM_ SG_ 851 SRR_FL_ObjBoxWidth_5 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 851 SRR_FL_ObjDyStdDe_5 "Lateral position standard deviation";
+CM_ SG_ 851 SRR_FL_ObjVxStdDe_5 "Longitudinal speed standard deviation";
+CM_ SG_ 851 SRR_FL_ObjVyStdDe_5 "Lateral speed standard deviation";
+CM_ SG_ 851 SRR_FL_ObjTyp_5 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 851 SRR_FL_ObjMtnPat_5 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 851 SRR_FL_ObjID_6 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 851 SRR_FL_ObjConf_6 "The probability of an object to exist in reality";
+CM_ SG_ 851 SRR_FL_ObjDistX_6 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 851 SRR_FL_ObjSNR_6 "Signal noise ratio";
+CM_ SG_ 851 SRR_FL_ObjDistY_6 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 851 SRR_FL_ObjRelVelX_6 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 851 SRR_FL_ObjRelVelY_6 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 851 SRR_FL_ObjAccelX_6 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 851 SRR_FL_ObjAccelY_6 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 851 SRR_FL_ObjHeading_6 "Heading angle";
+CM_ SG_ 851 SRR_FL_ObjBoxCenterLgt_6 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 851 SRR_FL_ObjBoxLength_6 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 851 SRR_FL_ObjBoxCenterLat_6 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 851 SRR_FL_ObjBoxWidth_6 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 851 SRR_FL_ObjDxStdDe_6 "Longitudinal position standard deviation";
+CM_ SG_ 851 SRR_FL_ObjDyStdDe_6 "Lateral position standard deviation";
+CM_ SG_ 851 SRR_FLObj3MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 851 SRR_FLObj3CRC16Checksum "CRC16";
+CM_ SG_ 852 SRR_FLObj4CRC16Checksum "CRC16";
+CM_ SG_ 852 SRR_FLObj4MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 852 SRR_FL_ObjMtnPat_8 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 852 SRR_FL_ObjTyp_8 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 852 SRR_FL_ObjVyStdDe_8 "Lateral speed standard deviation";
+CM_ SG_ 852 SRR_FL_ObjVxStdDe_8 "Longitudinal speed standard deviation";
+CM_ SG_ 852 SRR_FL_ObjDyStdDe_8 "Lateral position standard deviation";
+CM_ SG_ 852 SRR_FL_ObjDxStdDe_8 "Longitudinal position standard deviation";
+CM_ SG_ 852 SRR_FL_ObjBoxWidth_8 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 852 SRR_FL_ObjBoxLength_8 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 852 SRR_FL_ObjBoxCenterLat_8 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 852 SRR_FL_ObjBoxCenterLgt_8 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 852 SRR_FL_ObjHeading_8 "Heading angle";
+CM_ SG_ 852 SRR_FL_ObjAccelY_8 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 852 SRR_FL_ObjAccelX_8 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 852 SRR_FL_ObjRelVelY_8 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 852 SRR_FL_ObjRelVelX_8 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 852 SRR_FL_ObjDistY_8 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 852 SRR_FL_ObjDistX_8 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 852 SRR_FL_ObjSNR_8 "Signal noise ratio";
+CM_ SG_ 852 SRR_FL_ObjConf_8 "The probability of an object to exist in reality";
+CM_ SG_ 852 SRR_FL_ObjID_8 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 852 SRR_FL_ObjMtnPat_7 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 852 SRR_FL_ObjTyp_7 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 852 SRR_FL_ObjVyStdDe_7 "Lateral speed standard deviation";
+CM_ SG_ 852 SRR_FL_ObjVxStdDe_7 "Longitudinal speed standard deviation";
+CM_ SG_ 852 SRR_FL_ObjDyStdDe_7 "Lateral position standard deviation";
+CM_ SG_ 852 SRR_FL_ObjDxStdDe_7 "Longitudinal position standard deviation";
+CM_ SG_ 852 SRR_FL_ObjBoxWidth_7 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 852 SRR_FL_ObjBoxLength_7 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 852 SRR_FL_ObjBoxCenterLat_7 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 852 SRR_FL_ObjBoxCenterLgt_7 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 852 SRR_FL_ObjHeading_7 "Heading angle";
+CM_ SG_ 852 SRR_FL_ObjAccelY_7 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 852 SRR_FL_ObjAccelX_7 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 852 SRR_FL_ObjRelVelY_7 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 852 SRR_FL_ObjRelVelX_7 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 852 SRR_FL_ObjDistY_7 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 852 SRR_FL_ObjDistX_7 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 852 SRR_FL_ObjSNR_7 "Signal noise ratio";
+CM_ SG_ 852 SRR_FL_ObjConf_7 "The probability of an object to exist in reality";
+CM_ SG_ 852 SRR_FL_ObjID_7 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 824 SRR_FR_ObjMtnPat_16 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 824 SRR_FR_ObjVyStdDe_16 "Lateral speed standard deviation";
+CM_ SG_ 824 SRR_FR_ObjVxStdDe_16 "Longitudinal speed standard deviation";
+CM_ SG_ 824 SRR_FR_ObjTyp_16 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 824 SRR_FR_ObjID_15 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 824 SRR_FR_ObjConf_15 "The probability of an object to exist in reality";
+CM_ SG_ 824 SRR_FR_ObjSNR_15 "Signal noise ratio";
+CM_ SG_ 824 SRR_FR_ObjDistX_15 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 824 SRR_FR_ObjDistY_15 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 824 SRR_FR_ObjRelVelX_15 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 824 SRR_FR_ObjRelVelY_15 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 824 SRR_FR_ObjAccelX_15 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 824 SRR_FR_ObjAccelY_15 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 824 SRR_FR_ObjHeading_15 "Heading angle";
+CM_ SG_ 824 SRR_FR_ObjBoxCenterLgt_15 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 824 SRR_FR_ObjBoxCenterLat_15 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 824 SRR_FR_ObjBoxLength_15 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 824 SRR_FR_ObjDxStdDe_15 "Longitudinal position standard deviation";
+CM_ SG_ 824 SRR_FR_ObjBoxWidth_15 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 824 SRR_FR_ObjDyStdDe_15 "Lateral position standard deviation";
+CM_ SG_ 824 SRR_FR_ObjVxStdDe_15 "Longitudinal speed standard deviation";
+CM_ SG_ 824 SRR_FR_ObjVyStdDe_15 "Lateral speed standard deviation";
+CM_ SG_ 824 SRR_FR_ObjTyp_15 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 824 SRR_FR_ObjMtnPat_15 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 824 SRR_FR_ObjID_16 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 824 SRR_FR_ObjConf_16 "The probability of an object to exist in reality";
+CM_ SG_ 824 SRR_FR_ObjDistX_16 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 824 SRR_FR_ObjSNR_16 "Signal noise ratio";
+CM_ SG_ 824 SRR_FR_ObjDistY_16 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 824 SRR_FR_ObjRelVelX_16 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 824 SRR_FR_ObjRelVelY_16 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 824 SRR_FR_ObjAccelX_16 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 824 SRR_FR_ObjAccelY_16 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 824 SRR_FR_ObjHeading_16 "Heading angle";
+CM_ SG_ 824 SRR_FR_ObjBoxCenterLgt_16 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 824 SRR_FR_ObjBoxLength_16 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 824 SRR_FR_ObjBoxCenterLat_16 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 824 SRR_FR_ObjBoxWidth_16 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 824 SRR_FR_ObjDxStdDe_16 "Longitudinal position standard deviation";
+CM_ SG_ 824 SRR_FR_ObjDyStdDe_16 "Lateral position standard deviation";
+CM_ SG_ 824 SRR_FRObj8MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 824 SRR_FRObj8CRC16Checksum "CRC16";
+CM_ SG_ 823 SRR_FR_ObjMtnPat_14 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 823 SRR_FR_ObjVyStdDe_14 "Lateral speed standard deviation";
+CM_ SG_ 823 SRR_FR_ObjVxStdDe_14 "Longitudinal speed standard deviation";
+CM_ SG_ 823 SRR_FR_ObjTyp_14 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 823 SRR_FR_ObjID_13 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 823 SRR_FR_ObjConf_13 "The probability of an object to exist in reality";
+CM_ SG_ 823 SRR_FR_ObjSNR_13 "Signal noise ratio";
+CM_ SG_ 823 SRR_FR_ObjDistX_13 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 823 SRR_FR_ObjDistY_13 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 823 SRR_FR_ObjRelVelX_13 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 823 SRR_FR_ObjRelVelY_13 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 823 SRR_FR_ObjAccelX_13 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 823 SRR_FR_ObjAccelY_13 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 823 SRR_FR_ObjHeading_13 "Heading angle";
+CM_ SG_ 823 SRR_FR_ObjBoxCenterLgt_13 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 823 SRR_FR_ObjBoxCenterLat_13 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 823 SRR_FR_ObjBoxLength_13 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 823 SRR_FR_ObjDxStdDe_13 "Longitudinal position standard deviation";
+CM_ SG_ 823 SRR_FR_ObjBoxWidth_13 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 823 SRR_FR_ObjDyStdDe_13 "Lateral position standard deviation";
+CM_ SG_ 823 SRR_FR_ObjVxStdDe_13 "Longitudinal speed standard deviation";
+CM_ SG_ 823 SRR_FR_ObjVyStdDe_13 "Lateral speed standard deviation";
+CM_ SG_ 823 SRR_FR_ObjTyp_13 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 823 SRR_FR_ObjMtnPat_13 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 823 SRR_FR_ObjID_14 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 823 SRR_FR_ObjConf_14 "The probability of an object to exist in reality";
+CM_ SG_ 823 SRR_FR_ObjDistX_14 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 823 SRR_FR_ObjSNR_14 "Signal noise ratio";
+CM_ SG_ 823 SRR_FR_ObjDistY_14 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 823 SRR_FR_ObjRelVelX_14 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 823 SRR_FR_ObjRelVelY_14 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 823 SRR_FR_ObjAccelX_14 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 823 SRR_FR_ObjAccelY_14 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 823 SRR_FR_ObjHeading_14 "Heading angle";
+CM_ SG_ 823 SRR_FR_ObjBoxCenterLgt_14 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 823 SRR_FR_ObjBoxLength_14 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 823 SRR_FR_ObjBoxCenterLat_14 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 823 SRR_FR_ObjBoxWidth_14 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 823 SRR_FR_ObjDxStdDe_14 "Longitudinal position standard deviation";
+CM_ SG_ 823 SRR_FR_ObjDyStdDe_14 "Lateral position standard deviation";
+CM_ SG_ 823 SRR_FRObj7MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 823 SRR_FRObj7CRC16Checksum "CRC16";
+CM_ SG_ 822 SRR_FR_ObjMtnPat_12 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 822 SRR_FR_ObjVyStdDe_12 "Lateral speed standard deviation";
+CM_ SG_ 822 SRR_FR_ObjVxStdDe_12 "Longitudinal speed standard deviation";
+CM_ SG_ 822 SRR_FR_ObjTyp_12 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 822 SRR_FR_ObjID_11 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 822 SRR_FR_ObjConf_11 "The probability of an object to exist in reality";
+CM_ SG_ 822 SRR_FR_ObjSNR_11 "Signal noise ratio";
+CM_ SG_ 822 SRR_FR_ObjDistX_11 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 822 SRR_FR_ObjDistY_11 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 822 SRR_FR_ObjRelVelX_11 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 822 SRR_FR_ObjRelVelY_11 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 822 SRR_FR_ObjAccelX_11 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 822 SRR_FR_ObjAccelY_11 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 822 SRR_FR_ObjHeading_11 "Heading angle";
+CM_ SG_ 822 SRR_FR_ObjBoxCenterLgt_11 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 822 SRR_FR_ObjBoxCenterLat_11 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 822 SRR_FR_ObjBoxLength_11 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 822 SRR_FR_ObjDxStdDe_11 "Longitudinal position standard deviation";
+CM_ SG_ 822 SRR_FR_ObjBoxWidth_11 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 822 SRR_FR_ObjDyStdDe_11 "Lateral position standard deviation";
+CM_ SG_ 822 SRR_FR_ObjVxStdDe_11 "Longitudinal speed standard deviation";
+CM_ SG_ 822 SRR_FR_ObjVyStdDe_11 "Lateral speed standard deviation";
+CM_ SG_ 822 SRR_FR_ObjTyp_11 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 822 SRR_FR_ObjMtnPat_11 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 822 SRR_FR_ObjID_12 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 822 SRR_FR_ObjConf_12 "The probability of an object to exist in reality";
+CM_ SG_ 822 SRR_FR_ObjDistX_12 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 822 SRR_FR_ObjSNR_12 "Signal noise ratio";
+CM_ SG_ 822 SRR_FR_ObjDistY_12 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 822 SRR_FR_ObjRelVelX_12 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 822 SRR_FR_ObjRelVelY_12 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 822 SRR_FR_ObjAccelX_12 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 822 SRR_FR_ObjAccelY_12 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 822 SRR_FR_ObjHeading_12 "Heading angle";
+CM_ SG_ 822 SRR_FR_ObjBoxCenterLgt_12 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 822 SRR_FR_ObjBoxLength_12 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 822 SRR_FR_ObjBoxCenterLat_12 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 822 SRR_FR_ObjBoxWidth_12 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 822 SRR_FR_ObjDxStdDe_12 "Longitudinal position standard deviation";
+CM_ SG_ 822 SRR_FR_ObjDyStdDe_12 "Lateral position standard deviation";
+CM_ SG_ 822 SRR_FRObj6MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 822 SRR_FRObj6CRC16Checksum "CRC16";
+CM_ SG_ 821 SRR_FR_ObjMtnPat_10 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 821 SRR_FR_ObjVyStdDe_10 "Lateral speed standard deviation";
+CM_ SG_ 821 SRR_FR_ObjVxStdDe_10 "Longitudinal speed standard deviation";
+CM_ SG_ 821 SRR_FR_ObjTyp_10 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 821 SRR_FR_ObjID_9 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 821 SRR_FR_ObjConf_9 "The probability of an object to exist in reality";
+CM_ SG_ 821 SRR_FR_ObjSNR_9 "Signal noise ratio";
+CM_ SG_ 821 SRR_FR_ObjDistX_9 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 821 SRR_FR_ObjDistY_9 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 821 SRR_FR_ObjRelVelX_9 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 821 SRR_FR_ObjRelVelY_9 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 821 SRR_FR_ObjAccelX_9 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 821 SRR_FR_ObjAccelY_9 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 821 SRR_FR_ObjHeading_9 "Heading angle";
+CM_ SG_ 821 SRR_FR_ObjBoxCenterLgt_9 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 821 SRR_FR_ObjBoxCenterLat_9 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 821 SRR_FR_ObjBoxLength_9 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 821 SRR_FR_ObjDxStdDe_9 "Longitudinal position standard deviation";
+CM_ SG_ 821 SRR_FR_ObjBoxWidth_9 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 821 SRR_FR_ObjDyStdDe_9 "Lateral position standard deviation";
+CM_ SG_ 821 SRR_FR_ObjVxStdDe_9 "Longitudinal speed standard deviation";
+CM_ SG_ 821 SRR_FR_ObjVyStdDe_9 "Lateral speed standard deviation";
+CM_ SG_ 821 SRR_FR_ObjTyp_9 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 821 SRR_FR_ObjMtnPat_9 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 821 SRR_FR_ObjID_10 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 821 SRR_FR_ObjConf_10 "The probability of an object to exist in reality";
+CM_ SG_ 821 SRR_FR_ObjDistX_10 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 821 SRR_FR_ObjSNR_10 "Signal noise ratio";
+CM_ SG_ 821 SRR_FR_ObjDistY_10 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 821 SRR_FR_ObjRelVelX_10 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 821 SRR_FR_ObjRelVelY_10 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 821 SRR_FR_ObjAccelX_10 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 821 SRR_FR_ObjAccelY_10 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 821 SRR_FR_ObjHeading_10 "Heading angle";
+CM_ SG_ 821 SRR_FR_ObjBoxCenterLgt_10 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 821 SRR_FR_ObjBoxLength_10 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 821 SRR_FR_ObjBoxCenterLat_10 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 821 SRR_FR_ObjBoxWidth_10 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 821 SRR_FR_ObjDxStdDe_10 "Longitudinal position standard deviation";
+CM_ SG_ 821 SRR_FR_ObjDyStdDe_10 "Lateral position standard deviation";
+CM_ SG_ 821 SRR_FRObj5MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 821 SRR_FRObj5CRC16Checksum "CRC16";
+CM_ SG_ 816 SRR_FR_NrObj "Target number";
+CM_ SG_ 816 CRC16Checksum "CRC16";
+CM_ SG_ 816 MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 816 Radar_Status "bit 0：被遮挡
+bit 1：雷达内部故障
+bit 2：外部故障
+bit 3：动态标定中";
+CM_ SG_ 816 SRR_FR_OBJTi_Stamp "Object timestamp";
+CM_ SG_ 816 SRR_FR_TargetTI_Status "Bit 0: TIMEOUT
+Bit 1: Reserved1
+Bit 2: Reserved2
+Bit 3: GLOBAL_TIME_BASE
+Bit 4: TIMELEAP_FUTURE
+Bit 5: TIMELEAP_PAST
+Bit 6: Reserved6
+Bit 7: Extension: GENERAL_ERROR";
+CM_ SG_ 817 SRR_FR_ObjMtnPat_2 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 817 SRR_FR_ObjVyStdDe_2 "Lateral speed standard deviation";
+CM_ SG_ 817 SRR_FR_ObjVxStdDe_2 "Longitudinal speed standard deviation";
+CM_ SG_ 817 SRR_FR_ObjTyp_2 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 817 SRR_FR_ObjID_1 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 817 SRR_FR_ObjConf_1 "The probability of an object to exist in reality";
+CM_ SG_ 817 SRR_FR_ObjSNR_1 "Signal noise ratio";
+CM_ SG_ 817 SRR_FR_ObjDistX_1 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 817 SRR_FR_ObjDistY_1 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 817 SRR_FR_ObjRelVelX_1 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 817 SRR_FR_ObjRelVelY_1 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 817 SRR_FR_ObjAccelX_1 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 817 SRR_FR_ObjAccelY_1 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 817 SRR_FR_ObjHeading_1 "Heading angle";
+CM_ SG_ 817 SRR_FR_ObjBoxCenterLgt_1 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 817 SRR_FR_ObjBoxCenterLat_1 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 817 SRR_FR_ObjBoxLength_1 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 817 SRR_FR_ObjDxStdDe_1 "Longitudinal position standard deviation";
+CM_ SG_ 817 SRR_FR_ObjBoxWidth_1 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 817 SRR_FR_ObjDyStdDe_1 "Lateral position standard deviation";
+CM_ SG_ 817 SRR_FR_ObjVxStdDe_1 "Longitudinal speed standard deviation";
+CM_ SG_ 817 SRR_FR_ObjVyStdDe_1 "Lateral speed standard deviation";
+CM_ SG_ 817 SRR_FR_ObjTyp_1 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 817 SRR_FR_ObjMtnPat_1 "0x0:unknown
+0x1:staty
+0x2:StatyFromMovg
+0x3:moving";
+CM_ SG_ 817 SRR_FR_ObjID_2 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 817 SRR_FR_ObjConf_2 "The probability of an object to exist in reality";
+CM_ SG_ 817 SRR_FR_ObjDistX_2 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 817 SRR_FR_ObjSNR_2 "Signal noise ratio";
+CM_ SG_ 817 SRR_FR_ObjDistY_2 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 817 SRR_FR_ObjRelVelX_2 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 817 SRR_FR_ObjRelVelY_2 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 817 SRR_FR_ObjAccelX_2 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 817 SRR_FR_ObjAccelY_2 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 817 SRR_FR_ObjHeading_2 "Heading angle";
+CM_ SG_ 817 SRR_FR_ObjBoxCenterLgt_2 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 817 SRR_FR_ObjBoxLength_2 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 817 SRR_FR_ObjBoxCenterLat_2 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 817 SRR_FR_ObjBoxWidth_2 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 817 SRR_FR_ObjDxStdDe_2 "Longitudinal position standard deviation";
+CM_ SG_ 817 SRR_FR_ObjDyStdDe_2 "Lateral position standard deviation";
+CM_ SG_ 817 SRR_FRObj1MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 817 SRR_FRObj1CRC16Checksum "CRC16";
+CM_ SG_ 818 SRR_FR_ObjMtnPat_4 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 818 SRR_FR_ObjVyStdDe_4 "Lateral speed standard deviation";
+CM_ SG_ 818 SRR_FR_ObjVxStdDe_4 "Longitudinal speed standard deviation";
+CM_ SG_ 818 SRR_FR_ObjTyp_4 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 818 SRR_FR_ObjID_3 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 818 SRR_FR_ObjConf_3 "The probability of an object to exist in reality";
+CM_ SG_ 818 SRR_FR_ObjSNR_3 "Signal noise ratio";
+CM_ SG_ 818 SRR_FR_ObjDistX_3 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 818 SRR_FR_ObjDistY_3 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 818 SRR_FR_ObjRelVelX_3 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 818 SRR_FR_ObjRelVelY_3 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 818 SRR_FR_ObjAccelX_3 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 818 SRR_FR_ObjAccelY_3 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 818 SRR_FR_ObjHeading_3 "Heading angle";
+CM_ SG_ 818 SRR_FR_ObjBoxCenterLgt_3 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 818 SRR_FR_ObjBoxCenterLat_3 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 818 SRR_FR_ObjBoxLength_3 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 818 SRR_FR_ObjDxStdDe_3 "Longitudinal position standard deviation";
+CM_ SG_ 818 SRR_FR_ObjBoxWidth_3 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 818 SRR_FR_ObjDyStdDe_3 "Lateral position standard deviation";
+CM_ SG_ 818 SRR_FR_ObjVxStdDe_3 "Longitudinal speed standard deviation";
+CM_ SG_ 818 SRR_FR_ObjVyStdDe_3 "Lateral speed standard deviation";
+CM_ SG_ 818 SRR_FR_ObjTyp_3 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 818 SRR_FR_ObjMtnPat_3 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 818 SRR_FR_ObjID_4 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 818 SRR_FR_ObjConf_4 "The probability of an object to exist in reality";
+CM_ SG_ 818 SRR_FR_ObjDistX_4 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 818 SRR_FR_ObjSNR_4 "Signal noise ratio";
+CM_ SG_ 818 SRR_FR_ObjDistY_4 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 818 SRR_FR_ObjRelVelX_4 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 818 SRR_FR_ObjRelVelY_4 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 818 SRR_FR_ObjAccelX_4 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 818 SRR_FR_ObjAccelY_4 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 818 SRR_FR_ObjHeading_4 "Heading angle";
+CM_ SG_ 818 SRR_FR_ObjBoxCenterLgt_4 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 818 SRR_FR_ObjBoxLength_4 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 818 SRR_FR_ObjBoxCenterLat_4 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 818 SRR_FR_ObjBoxWidth_4 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 818 SRR_FR_ObjDxStdDe_4 "Longitudinal position standard deviation";
+CM_ SG_ 818 SRR_FR_ObjDyStdDe_4 "Lateral position standard deviation";
+CM_ SG_ 818 SRR_FRObj2MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 818 SRR_FRObj2CRC16Checksum "CRC16";
+CM_ SG_ 819 SRR_FR_ObjMtnPat_6 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 819 SRR_FR_ObjVyStdDe_6 "Lateral speed standard deviation";
+CM_ SG_ 819 SRR_FR_ObjVxStdDe_6 "Longitudinal speed standard deviation";
+CM_ SG_ 819 SRR_FR_ObjTyp_6 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 819 SRR_FR_ObjID_5 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 819 SRR_FR_ObjConf_5 "The probability of an object to exist in reality";
+CM_ SG_ 819 SRR_FR_ObjSNR_5 "Signal noise ratio";
+CM_ SG_ 819 SRR_FR_ObjDistX_5 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 819 SRR_FR_ObjDistY_5 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 819 SRR_FR_ObjRelVelX_5 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 819 SRR_FR_ObjRelVelY_5 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 819 SRR_FR_ObjAccelX_5 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 819 SRR_FR_ObjAccelY_5 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 819 SRR_FR_ObjHeading_5 "Heading angle";
+CM_ SG_ 819 SRR_FR_ObjBoxCenterLgt_5 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 819 SRR_FR_ObjBoxCenterLat_5 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 819 SRR_FR_ObjBoxLength_5 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 819 SRR_FR_ObjDxStdDe_5 "Longitudinal position standard deviation";
+CM_ SG_ 819 SRR_FR_ObjBoxWidth_5 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 819 SRR_FR_ObjDyStdDe_5 "Lateral position standard deviation";
+CM_ SG_ 819 SRR_FR_ObjVxStdDe_5 "Longitudinal speed standard deviation";
+CM_ SG_ 819 SRR_FR_ObjVyStdDe_5 "Lateral speed standard deviation";
+CM_ SG_ 819 SRR_FR_ObjTyp_5 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 819 SRR_FR_ObjMtnPat_5 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 819 SRR_FR_ObjID_6 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 819 SRR_FR_ObjConf_6 "The probability of an object to exist in reality";
+CM_ SG_ 819 SRR_FR_ObjDistX_6 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 819 SRR_FR_ObjSNR_6 "Signal noise ratio";
+CM_ SG_ 819 SRR_FR_ObjDistY_6 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 819 SRR_FR_ObjRelVelX_6 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 819 SRR_FR_ObjRelVelY_6 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 819 SRR_FR_ObjAccelX_6 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 819 SRR_FR_ObjAccelY_6 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 819 SRR_FR_ObjHeading_6 "Heading angle";
+CM_ SG_ 819 SRR_FR_ObjBoxCenterLgt_6 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 819 SRR_FR_ObjBoxLength_6 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 819 SRR_FR_ObjBoxCenterLat_6 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 819 SRR_FR_ObjBoxWidth_6 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 819 SRR_FR_ObjDxStdDe_6 "Longitudinal position standard deviation";
+CM_ SG_ 819 SRR_FR_ObjDyStdDe_6 "Lateral position standard deviation";
+CM_ SG_ 819 SRR_FRObj3MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 819 SRR_FRObj3CRC16Checksum "CRC16";
+CM_ SG_ 820 SRR_FRObj4CRC16Checksum "CRC16";
+CM_ SG_ 820 SRR_FRObj4MsgCounter "The MessageCounter is a 0 ~ 15 counter, increased of one unit on every message transmission";
+CM_ SG_ 820 SRR_FR_ObjMtnPat_8 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 820 SRR_FR_ObjTyp_8 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 820 SRR_FR_ObjVyStdDe_8 "Lateral speed standard deviation";
+CM_ SG_ 820 SRR_FR_ObjVxStdDe_8 "Longitudinal speed standard deviation";
+CM_ SG_ 820 SRR_FR_ObjDyStdDe_8 "Lateral position standard deviation";
+CM_ SG_ 820 SRR_FR_ObjDxStdDe_8 "Longitudinal position standard deviation";
+CM_ SG_ 820 SRR_FR_ObjBoxWidth_8 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 820 SRR_FR_ObjBoxLength_8 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 820 SRR_FR_ObjBoxCenterLat_8 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 820 SRR_FR_ObjBoxCenterLgt_8 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 820 SRR_FR_ObjHeading_8 "Heading angle";
+CM_ SG_ 820 SRR_FR_ObjAccelY_8 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 820 SRR_FR_ObjAccelX_8 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 820 SRR_FR_ObjRelVelY_8 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 820 SRR_FR_ObjRelVelX_8 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 820 SRR_FR_ObjDistY_8 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 820 SRR_FR_ObjDistX_8 "Position of target vehicle in x-direction（目标最近点的纵向距离）";
+CM_ SG_ 820 SRR_FR_ObjSNR_8 "Signal noise ratio";
+CM_ SG_ 820 SRR_FR_ObjConf_8 "The probability of an object to exist in reality";
+CM_ SG_ 820 SRR_FR_ObjID_8 "ID is an identifier number that allows for tracking of persistent objects over time";
+CM_ SG_ 820 SRR_FR_ObjMtnPat_7 "0x0:unknown
+0x1:StatyFromMovg
+0x2:moving
+0x3:staty";
+CM_ SG_ 820 SRR_FR_ObjTyp_7 "0x0:unknown
+0x01:pedestrian
+0x02:Bicycle 
+0x03:Vehicle";
+CM_ SG_ 820 SRR_FR_ObjVyStdDe_7 "Lateral speed standard deviation";
+CM_ SG_ 820 SRR_FR_ObjVxStdDe_7 "Longitudinal speed standard deviation";
+CM_ SG_ 820 SRR_FR_ObjDyStdDe_7 "Lateral position standard deviation";
+CM_ SG_ 820 SRR_FR_ObjDxStdDe_7 "Longitudinal position standard deviation";
+CM_ SG_ 820 SRR_FR_ObjBoxWidth_7 "长方体宽度 (垂直于对象Heading angle的长方体宽度）";
+CM_ SG_ 820 SRR_FR_ObjBoxLength_7 "长方体长度（平行于对象Heading angle的长方体长度）";
+CM_ SG_ 820 SRR_FR_ObjBoxCenterLat_7 "长方体中心y坐标（相对于目标最近点）";
+CM_ SG_ 820 SRR_FR_ObjBoxCenterLgt_7 "长方体中心x坐标（相对于目标最近点）";
+CM_ SG_ 820 SRR_FR_ObjHeading_7 "Heading angle";
+CM_ SG_ 820 SRR_FR_ObjAccelY_7 "target acceleration  in y-direction（绝对加速度）";
+CM_ SG_ 820 SRR_FR_ObjAccelX_7 "target acceleration  in x-direction（绝对加速度）";
+CM_ SG_ 820 SRR_FR_ObjRelVelY_7 "target object velocity in y-direction（绝对速度）";
+CM_ SG_ 820 SRR_FR_ObjRelVelX_7 "target object velocity in x-direction（绝对速度）";
+CM_ SG_ 820 SRR_FR_ObjDistY_7 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 820 SRR_FR_ObjDistX_7 "Position of target vehicle in y-direction (目标最近点的横向距离)";
+CM_ SG_ 820 SRR_FR_ObjSNR_7 "Signal noise ratio";
+CM_ SG_ 820 SRR_FR_ObjConf_7 "The probability of an object to exist in reality";
+CM_ SG_ 820 SRR_FR_ObjID_7 "ID is an identifier number that allows for tracking of persistent objects over time";
+BA_DEF_ SG_  "InvalidHex" STRING ;
+BA_DEF_ SG_  "NWM_WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 100000000000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "NetworkInitializationCommand" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkWakeUp" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkInitialization" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 100000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 100;
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 10000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "FixedPeriodic","Event","EnabledPeriodic","Enable","NotUsed","EventPeriodic","NotUsed","NotUsed","NoMsgSendType","Cycle";
+BA_DEF_ BO_  "TpTxIndex" INT 0 10000;
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "NmCAN" INT 1 2;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NetworkInitializationUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 255;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "Project" STRING ;
+BA_DEF_  "Version" STRING ;
+BA_DEF_  "Date" STRING ;
+BA_DEF_  "Author" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 0 2047;
+BA_DEF_  "NmMessageCount" INT 0 256;
+BA_DEF_DEF_  "InvalidHex" "";
+BA_DEF_DEF_  "NWM_WakeupAllowed" "No";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "NetworkInitializationCommand" "No";
+BA_DEF_DEF_  "NetworkWakeUp" "No";
+BA_DEF_DEF_  "NetworkInitialization" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "GenMsgDelayTime" 10;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 3;
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cycle";
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "NmCAN" 1;
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NetworkInitializationUsed" "No";
+BA_DEF_DEF_  "NmNode" "No";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "ILUsed" "";
+BA_DEF_DEF_  "Manufacturer" "XPeng";
+BA_DEF_DEF_  "Project" "D55";
+BA_DEF_DEF_  "Version" "N";
+BA_DEF_DEF_  "Date" "N";
+BA_DEF_DEF_  "Author" "LiangLing";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "NmMessageCount" 256;
+BA_ "Date" "2021-10-29";
+BA_ "Version" "V61BugFix5";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "AFD1";
+BA_ "NmStationAddress" BU_ SRR_FL 58;
+BA_ "NmStationAddress" BU_ SRR_FR 59;
+BA_ "GenMsgSendType" BO_ 992 9;
+BA_ "GenMsgCycleTime" BO_ 992 1000;
+BA_ "VFrameFormat" BO_ 992 14;
+BA_ "GenMsgSendType" BO_ 2007 1;
+BA_ "VFrameFormat" BO_ 2007 14;
+BA_ "GenMsgSendType" BO_ 2004 1;
+BA_ "VFrameFormat" BO_ 2004 14;
+BA_ "GenMsgSendType" BO_ 1991 1;
+BA_ "VFrameFormat" BO_ 1991 14;
+BA_ "GenMsgSendType" BO_ 1988 1;
+BA_ "VFrameFormat" BO_ 1988 14;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "VFrameFormat" BO_ 2015 14;
+BA_ "GenMsgSendType" BO_ 805 9;
+BA_ "GenMsgCycleTime" BO_ 805 500;
+BA_ "VFrameFormat" BO_ 805 14;
+BA_ "GenMsgSendType" BO_ 860 9;
+BA_ "GenMsgCycleTime" BO_ 860 500;
+BA_ "VFrameFormat" BO_ 860 14;
+BA_ "GenMsgSendType" BO_ 419 9;
+BA_ "GenMsgCycleTime" BO_ 419 50;
+BA_ "VFrameFormat" BO_ 419 14;
+BA_ "GenMsgSendType" BO_ 418 9;
+BA_ "GenMsgCycleTime" BO_ 418 50;
+BA_ "VFrameFormat" BO_ 418 14;
+BA_ "GenMsgSendType" BO_ 229 9;
+BA_ "GenMsgCycleTime" BO_ 229 10;
+BA_ "VFrameFormat" BO_ 229 14;
+BA_ "GenMsgSendType" BO_ 486 9;
+BA_ "GenMsgCycleTime" BO_ 486 50;
+BA_ "VFrameFormat" BO_ 486 14;
+BA_ "GenMsgSendType" BO_ 272 9;
+BA_ "GenMsgCycleTime" BO_ 272 20;
+BA_ "VFrameFormat" BO_ 272 14;
+BA_ "GenMsgSendType" BO_ 196 9;
+BA_ "GenMsgCycleTime" BO_ 196 10;
+BA_ "VFrameFormat" BO_ 196 14;
+BA_ "GenMsgSendType" BO_ 199 9;
+BA_ "GenMsgCycleTime" BO_ 199 10;
+BA_ "VFrameFormat" BO_ 199 14;
+BA_ "GenMsgSendType" BO_ 197 9;
+BA_ "GenMsgCycleTime" BO_ 197 10;
+BA_ "VFrameFormat" BO_ 197 14;
+BA_ "GenMsgSendType" BO_ 177 9;
+BA_ "GenMsgCycleTime" BO_ 177 10;
+BA_ "VFrameFormat" BO_ 177 14;
+BA_ "GenMsgSendType" BO_ 227 9;
+BA_ "GenMsgCycleTime" BO_ 227 20;
+BA_ "VFrameFormat" BO_ 227 14;
+BA_ "GenMsgSendType" BO_ 856 9;
+BA_ "GenMsgCycleTime" BO_ 856 50;
+BA_ "NmMessage" BO_ 856 0;
+BA_ "VFrameFormat" BO_ 856 14;
+BA_ "GenMsgSendType" BO_ 855 9;
+BA_ "GenMsgCycleTime" BO_ 855 50;
+BA_ "NmMessage" BO_ 855 0;
+BA_ "VFrameFormat" BO_ 855 14;
+BA_ "GenMsgSendType" BO_ 854 9;
+BA_ "GenMsgCycleTime" BO_ 854 50;
+BA_ "NmMessage" BO_ 854 0;
+BA_ "VFrameFormat" BO_ 854 14;
+BA_ "GenMsgSendType" BO_ 853 9;
+BA_ "GenMsgCycleTime" BO_ 853 50;
+BA_ "NmMessage" BO_ 853 0;
+BA_ "VFrameFormat" BO_ 853 14;
+BA_ "GenMsgCycleTime" BO_ 848 50;
+BA_ "VFrameFormat" BO_ 848 14;
+BA_ "NmMessage" BO_ 849 0;
+BA_ "GenMsgCycleTime" BO_ 849 50;
+BA_ "GenMsgSendType" BO_ 849 9;
+BA_ "VFrameFormat" BO_ 849 14;
+BA_ "NmMessage" BO_ 850 0;
+BA_ "GenMsgCycleTime" BO_ 850 50;
+BA_ "GenMsgSendType" BO_ 850 9;
+BA_ "VFrameFormat" BO_ 850 14;
+BA_ "NmMessage" BO_ 851 0;
+BA_ "GenMsgCycleTime" BO_ 851 50;
+BA_ "GenMsgSendType" BO_ 851 9;
+BA_ "VFrameFormat" BO_ 851 14;
+BA_ "NmMessage" BO_ 852 0;
+BA_ "GenMsgCycleTime" BO_ 852 50;
+BA_ "GenMsgSendType" BO_ 852 9;
+BA_ "VFrameFormat" BO_ 852 14;
+BA_ "VFrameFormat" BO_ 2028 14;
+BA_ "NmMessage" BO_ 824 0;
+BA_ "GenMsgCycleTime" BO_ 824 50;
+BA_ "GenMsgSendType" BO_ 824 9;
+BA_ "VFrameFormat" BO_ 824 14;
+BA_ "NmMessage" BO_ 823 0;
+BA_ "GenMsgCycleTime" BO_ 823 50;
+BA_ "GenMsgSendType" BO_ 823 9;
+BA_ "VFrameFormat" BO_ 823 14;
+BA_ "NmMessage" BO_ 822 0;
+BA_ "GenMsgCycleTime" BO_ 822 50;
+BA_ "GenMsgSendType" BO_ 822 9;
+BA_ "VFrameFormat" BO_ 822 14;
+BA_ "NmMessage" BO_ 821 0;
+BA_ "GenMsgCycleTime" BO_ 821 50;
+BA_ "GenMsgSendType" BO_ 821 9;
+BA_ "VFrameFormat" BO_ 821 14;
+BA_ "GenMsgCycleTime" BO_ 816 50;
+BA_ "VFrameFormat" BO_ 816 14;
+BA_ "GenMsgSendType" BO_ 817 9;
+BA_ "GenMsgCycleTime" BO_ 817 50;
+BA_ "NmMessage" BO_ 817 0;
+BA_ "VFrameFormat" BO_ 817 14;
+BA_ "GenMsgSendType" BO_ 818 9;
+BA_ "GenMsgCycleTime" BO_ 818 50;
+BA_ "NmMessage" BO_ 818 0;
+BA_ "VFrameFormat" BO_ 818 14;
+BA_ "GenMsgSendType" BO_ 819 9;
+BA_ "GenMsgCycleTime" BO_ 819 50;
+BA_ "NmMessage" BO_ 819 0;
+BA_ "VFrameFormat" BO_ 819 14;
+BA_ "GenMsgSendType" BO_ 820 9;
+BA_ "GenMsgCycleTime" BO_ 820 50;
+BA_ "NmMessage" BO_ 820 0;
+BA_ "VFrameFormat" BO_ 820 14;
+BA_ "VFrameFormat" BO_ 2029 14;
+BA_ "VFrameFormat" BO_ 2025 14;
+BA_ "VFrameFormat" BO_ 2024 14;
+BA_ "GenSigStartValue" SG_ 196 ACU2_VehicleDynYawRate 18000;
+BA_ "GenSigStartValue" SG_ 196 ACU2_LongAccSensorValue 800;
+BA_ "GenSigStartValue" SG_ 196 ACU2_LatAccSensorValue 800;
+BA_ "GenSigStartValue" SG_ 177 EPS1_SteeringAngle 22608.6956521739;
+BA_ "GenSigStartValue" SG_ 177 EPS1_SteerAngleSpd 8192;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjID_15 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjConf_15 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjDistX_15 2048;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjDistY_15 8192;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjRelVelX_15 2048;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjRelVelY_15 2048;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjAccelX_15 512;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjAccelY_15 512;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjHeading_15 1800;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjBoxCenterLgt_15 250;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjBoxCenterLat_15 250;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjBoxLength_15 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjDxStdDe_15 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjBoxWidth_15 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjDyStdDe_15 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjTyp_15 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjConf_16 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjDistX_16 2048;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjSNR_16 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjDistY_16 8192;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjRelVelX_16 2048;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjRelVelY_16 2048;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjAccelX_16 512;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjAccelY_16 512;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjHeading_16 1800;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjBoxCenterLgt_16 250;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjBoxLength_16 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjBoxCenterLat_16 250;
+BA_ "GenSigStartValue" SG_ 856 SRR_FL_ObjBoxWidth_16 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FLObj8MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 856 SRR_FLObj8CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjID_13 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjConf_13 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjDistX_13 2048;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjDistY_13 8192;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjRelVelX_13 2048;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjRelVelY_13 2048;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjAccelX_13 512;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjAccelY_13 512;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjHeading_13 1800;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjBoxCenterLgt_13 250;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjBoxCenterLat_13 250;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjBoxLength_13 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjDxStdDe_13 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjBoxWidth_13 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjDyStdDe_13 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjTyp_13 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjConf_14 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjDistX_14 2048;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjSNR_14 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjDistY_14 8192;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjRelVelX_14 2048;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjRelVelY_14 2048;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjAccelX_14 512;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjAccelY_14 512;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjHeading_14 1800;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjBoxCenterLgt_14 250;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjBoxLength_14 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjBoxCenterLat_14 250;
+BA_ "GenSigStartValue" SG_ 855 SRR_FL_ObjBoxWidth_14 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FLObj7MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 855 SRR_FLObj7CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjID_11 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjConf_11 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjDistX_11 2048;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjDistY_11 8192;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjRelVelX_11 2048;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjRelVelY_11 2048;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjAccelX_11 512;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjAccelY_11 512;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjHeading_11 1800;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjBoxCenterLgt_11 250;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjBoxCenterLat_11 250;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjBoxLength_11 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjDxStdDe_11 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjBoxWidth_11 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjDyStdDe_11 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjTyp_11 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjConf_12 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjDistX_12 2048;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjSNR_12 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjDistY_12 8192;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjRelVelX_12 2048;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjRelVelY_12 2048;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjAccelX_12 512;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjAccelY_12 512;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjHeading_12 1800;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjBoxCenterLgt_12 250;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjBoxLength_12 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjBoxCenterLat_12 250;
+BA_ "GenSigStartValue" SG_ 854 SRR_FL_ObjBoxWidth_12 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FLObj6MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 854 SRR_FLObj6CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjID_9 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjConf_9 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjDistX_9 2048;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjDistY_9 8192;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjRelVelX_9 2048;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjRelVelY_9 2048;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjAccelX_9 512;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjAccelY_9 512;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjHeading_9 1800;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjBoxCenterLgt_9 250;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjBoxCenterLat_9 250;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjBoxLength_9 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjDxStdDe_9 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjBoxWidth_9 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjDyStdDe_9 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjTyp_9 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjConf_10 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjDistX_10 2048;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjSNR_10 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjDistY_10 8192;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjRelVelX_10 2048;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjRelVelY_10 2048;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjAccelX_10 512;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjAccelY_10 512;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjHeading_10 1800;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjBoxCenterLgt_10 250;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjBoxLength_10 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjBoxCenterLat_10 250;
+BA_ "GenSigStartValue" SG_ 853 SRR_FL_ObjBoxWidth_10 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FLObj5MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 853 SRR_FLObj5CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjID_1 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjConf_1 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjDistX_1 2048;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjDistY_1 8192;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjRelVelX_1 2048;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjRelVelY_1 2048;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjAccelX_1 512;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjAccelY_1 512;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjHeading_1 1800;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjBoxCenterLgt_1 250;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjBoxCenterLat_1 250;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjBoxLength_1 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjDxStdDe_1 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjBoxWidth_1 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjDyStdDe_1 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjTyp_1 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjConf_2 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjDistX_2 2048;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjSNR_2 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjDistY_2 8192;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjRelVelX_2 2048;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjRelVelY_2 2048;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjAccelX_2 512;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjAccelY_2 512;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjHeading_2 1800;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjBoxCenterLgt_2 250;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjBoxLength_2 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjBoxCenterLat_2 250;
+BA_ "GenSigStartValue" SG_ 849 SRR_FL_ObjBoxWidth_2 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FLObj1MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 849 SRR_FLObj1CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjID_3 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjConf_3 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjDistX_3 2048;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjDistY_3 8192;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjRelVelX_3 2048;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjRelVelY_3 2048;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjAccelX_3 512;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjAccelY_3 512;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjHeading_3 1800;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjBoxCenterLgt_3 250;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjBoxCenterLat_3 250;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjBoxLength_3 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjDxStdDe_3 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjBoxWidth_3 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjDyStdDe_3 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjTyp_3 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjConf_4 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjDistX_4 2048;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjSNR_4 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjDistY_4 8192;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjRelVelX_4 2048;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjRelVelY_4 2048;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjAccelX_4 512;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjAccelY_4 512;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjHeading_4 1800;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjBoxCenterLgt_4 250;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjBoxLength_4 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjBoxCenterLat_4 250;
+BA_ "GenSigStartValue" SG_ 850 SRR_FL_ObjBoxWidth_4 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FLObj2MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 850 SRR_FLObj2CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjID_5 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjConf_5 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjDistX_5 2048;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjDistY_5 8192;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjRelVelX_5 2048;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjRelVelY_5 2048;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjAccelX_5 512;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjAccelY_5 512;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjHeading_5 1800;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjBoxCenterLgt_5 250;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjBoxCenterLat_5 250;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjBoxLength_5 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjDxStdDe_5 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjBoxWidth_5 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjDyStdDe_5 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjTyp_5 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjConf_6 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjDistX_6 2048;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjSNR_6 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjDistY_6 8192;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjRelVelX_6 2048;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjRelVelY_6 2048;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjAccelX_6 512;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjAccelY_6 512;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjHeading_6 1800;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjBoxCenterLgt_6 250;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjBoxLength_6 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjBoxCenterLat_6 250;
+BA_ "GenSigStartValue" SG_ 851 SRR_FL_ObjBoxWidth_6 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FLObj3MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 851 SRR_FLObj3CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FLObj4CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FLObj4MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjBoxWidth_8 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjBoxLength_8 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjBoxCenterLat_8 250;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjBoxCenterLgt_8 250;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjHeading_8 1800;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjAccelY_8 512;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjAccelX_8 512;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjRelVelY_8 2048;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjRelVelX_8 2048;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjDistY_8 8192;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjDistX_8 2048;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjSNR_8 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjConf_8 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjBoxWidth_7 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjBoxLength_7 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjBoxCenterLat_7 250;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjBoxCenterLgt_7 250;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjHeading_7 1800;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjAccelY_7 512;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjAccelX_7 512;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjRelVelY_7 2048;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjRelVelX_7 2048;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjDistY_7 8192;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjDistX_7 2048;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjSNR_7 0;
+BA_ "GenSigStartValue" SG_ 852 SRR_FL_ObjConf_7 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjID_15 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjConf_15 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjDistX_15 2048;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjDistY_15 8192;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjRelVelX_15 2048;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjRelVelY_15 2048;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjAccelX_15 512;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjAccelY_15 512;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjHeading_15 1800;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjBoxCenterLgt_15 250;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjBoxCenterLat_15 250;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjBoxLength_15 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjDxStdDe_15 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjBoxWidth_15 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjDyStdDe_15 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjTyp_15 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjConf_16 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjDistX_16 2048;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjSNR_16 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjDistY_16 8192;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjRelVelX_16 2048;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjRelVelY_16 2048;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjAccelX_16 512;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjAccelY_16 512;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjHeading_16 1800;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjBoxCenterLgt_16 250;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjBoxLength_16 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjBoxCenterLat_16 250;
+BA_ "GenSigStartValue" SG_ 824 SRR_FR_ObjBoxWidth_16 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FRObj8MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 824 SRR_FRObj8CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjID_13 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjConf_13 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjDistX_13 2048;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjDistY_13 8192;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjRelVelX_13 2048;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjRelVelY_13 2048;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjAccelX_13 512;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjAccelY_13 512;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjHeading_13 1800;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjBoxCenterLgt_13 250;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjBoxCenterLat_13 250;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjBoxLength_13 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjDxStdDe_13 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjBoxWidth_13 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjDyStdDe_13 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjTyp_13 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjConf_14 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjDistX_14 2048;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjSNR_14 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjDistY_14 8192;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjRelVelX_14 2048;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjRelVelY_14 2048;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjAccelX_14 512;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjAccelY_14 512;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjHeading_14 1800;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjBoxCenterLgt_14 250;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjBoxLength_14 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjBoxCenterLat_14 250;
+BA_ "GenSigStartValue" SG_ 823 SRR_FR_ObjBoxWidth_14 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FRObj7MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 823 SRR_FRObj7CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjID_11 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjConf_11 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjDistX_11 2048;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjDistY_11 8192;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjRelVelX_11 2048;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjRelVelY_11 2048;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjAccelX_11 512;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjAccelY_11 512;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjHeading_11 1800;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjBoxCenterLgt_11 250;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjBoxCenterLat_11 250;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjBoxLength_11 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjDxStdDe_11 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjBoxWidth_11 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjDyStdDe_11 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjTyp_11 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjConf_12 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjDistX_12 2048;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjSNR_12 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjDistY_12 8192;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjRelVelX_12 2048;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjRelVelY_12 2048;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjAccelX_12 512;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjAccelY_12 512;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjHeading_12 1800;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjBoxCenterLgt_12 250;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjBoxLength_12 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjBoxCenterLat_12 250;
+BA_ "GenSigStartValue" SG_ 822 SRR_FR_ObjBoxWidth_12 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FRObj6MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 822 SRR_FRObj6CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjID_9 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjConf_9 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjDistX_9 2048;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjDistY_9 8192;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjRelVelX_9 2048;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjRelVelY_9 2048;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjAccelX_9 512;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjAccelY_9 512;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjHeading_9 1800;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjBoxCenterLgt_9 250;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjBoxCenterLat_9 250;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjBoxLength_9 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjDxStdDe_9 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjBoxWidth_9 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjDyStdDe_9 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjTyp_9 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjConf_10 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjDistX_10 2048;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjSNR_10 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjDistY_10 8192;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjRelVelX_10 2048;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjRelVelY_10 2048;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjAccelX_10 512;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjAccelY_10 512;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjHeading_10 1800;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjBoxCenterLgt_10 250;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjBoxLength_10 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjBoxCenterLat_10 250;
+BA_ "GenSigStartValue" SG_ 821 SRR_FR_ObjBoxWidth_10 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FRObj5MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 821 SRR_FRObj5CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjID_1 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjConf_1 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjDistX_1 2048;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjDistY_1 8192;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjRelVelX_1 2048;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjRelVelY_1 2048;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjAccelX_1 512;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjAccelY_1 512;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjHeading_1 1800;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjBoxCenterLgt_1 250;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjBoxCenterLat_1 250;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjBoxLength_1 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjDxStdDe_1 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjBoxWidth_1 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjDyStdDe_1 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjTyp_1 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjConf_2 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjDistX_2 2048;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjSNR_2 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjDistY_2 8192;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjRelVelX_2 2048;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjRelVelY_2 2048;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjAccelX_2 512;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjAccelY_2 512;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjHeading_2 1800;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjBoxCenterLgt_2 250;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjBoxLength_2 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjBoxCenterLat_2 250;
+BA_ "GenSigStartValue" SG_ 817 SRR_FR_ObjBoxWidth_2 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FRObj1MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 817 SRR_FRObj1CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjID_3 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjConf_3 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjDistX_3 2048;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjDistY_3 8192;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjRelVelX_3 2048;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjRelVelY_3 2048;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjAccelX_3 512;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjAccelY_3 512;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjHeading_3 1800;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjBoxCenterLgt_3 250;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjBoxCenterLat_3 250;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjBoxLength_3 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjDxStdDe_3 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjBoxWidth_3 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjDyStdDe_3 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjTyp_3 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjConf_4 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjDistX_4 2048;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjSNR_4 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjDistY_4 8192;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjRelVelX_4 2048;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjRelVelY_4 2048;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjAccelX_4 512;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjAccelY_4 512;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjHeading_4 1800;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjBoxCenterLgt_4 250;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjBoxLength_4 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjBoxCenterLat_4 250;
+BA_ "GenSigStartValue" SG_ 818 SRR_FR_ObjBoxWidth_4 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FRObj2MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 818 SRR_FRObj2CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjID_5 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjConf_5 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjDistX_5 2048;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjDistY_5 8192;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjRelVelX_5 2048;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjRelVelY_5 2048;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjAccelX_5 512;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjAccelY_5 512;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjHeading_5 1800;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjBoxCenterLgt_5 250;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjBoxCenterLat_5 250;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjBoxLength_5 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjDxStdDe_5 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjBoxWidth_5 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjDyStdDe_5 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjTyp_5 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjConf_6 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjDistX_6 2048;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjSNR_6 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjDistY_6 8192;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjRelVelX_6 2048;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjRelVelY_6 2048;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjAccelX_6 512;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjAccelY_6 512;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjHeading_6 1800;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjBoxCenterLgt_6 250;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjBoxLength_6 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjBoxCenterLat_6 250;
+BA_ "GenSigStartValue" SG_ 819 SRR_FR_ObjBoxWidth_6 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FRObj3MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 819 SRR_FRObj3CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FRObj4CRC16Checksum 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FRObj4MsgCounter 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjBoxWidth_8 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjBoxLength_8 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjBoxCenterLat_8 250;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjBoxCenterLgt_8 250;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjHeading_8 1800;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjAccelY_8 512;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjAccelX_8 512;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjRelVelY_8 2048;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjRelVelX_8 2048;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjDistY_8 8192;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjDistX_8 2048;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjSNR_8 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjConf_8 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjBoxWidth_7 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjBoxLength_7 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjBoxCenterLat_7 250;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjBoxCenterLgt_7 250;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjHeading_7 1800;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjAccelY_7 512;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjAccelX_7 512;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjRelVelY_7 2048;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjRelVelX_7 2048;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjDistY_7 8192;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjDistX_7 2048;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjSNR_7 0;
+BA_ "GenSigStartValue" SG_ 820 SRR_FR_ObjConf_7 0;
+BA_ "GenSigStartValue" SG_ 2025 FR_vlc_8 4096;
+BA_ "GenSigStartValue" SG_ 2025 FR_vlc_7 4096;
+BA_ "GenSigStartValue" SG_ 2025 FR_vlc_6 4096;
+BA_ "GenSigStartValue" SG_ 2025 FR_vlc_5 4096;
+BA_ "GenSigStartValue" SG_ 2025 FR_vlc_4 4096;
+BA_ "GenSigStartValue" SG_ 2025 FR_vlc_3 4096;
+BA_ "GenSigStartValue" SG_ 2025 FR_vlc_2 4096;
+BA_ "GenSigStartValue" SG_ 2025 FR_vlc_1 4096;
+BA_ "GenSigStartValue" SG_ 2024 FL_vlc_8 4096;
+BA_ "GenSigStartValue" SG_ 2024 FL_vlc_7 4096;
+BA_ "GenSigStartValue" SG_ 2024 FL_vlc_6 4096;
+BA_ "GenSigStartValue" SG_ 2024 FL_vlc_5 4096;
+BA_ "GenSigStartValue" SG_ 2024 FL_vlc_4 4096;
+BA_ "GenSigStartValue" SG_ 2024 FL_vlc_3 4096;
+BA_ "GenSigStartValue" SG_ 2024 FL_vlc_2 4096;
+BA_ "GenSigStartValue" SG_ 2024 FL_vlc_1 4096;
+VAL_ 860 Type 40 "有CRC followup帧" 32 "有CRC时间同步帧" 24 "无CRC followup帧" 16 "无CRC时间同步帧" ;
+VAL_ 419 PDCU1_RRDoorAjar 3 "Unknow" 2 "Open" 1 "Secondary" 0 "Closed" ;
+VAL_ 419 PDCU1_FRDoorAjar 3 "Unknow" 2 "Open" 1 "Secondary" 0 "Closed" ;
+VAL_ 418 DDCU1_RLDoorAjar 3 "Unknow" 2 "Open" 1 "Secondary" 0 "Closed" ;
+VAL_ 418 DDCU1_FLDoorAjar 3 "Unknow" 2 "Open" 1 "Secondary" 0 "Closed" ;
+VAL_ 229 IDB1_BrakePedalAppliedV 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 229 IDB1_BrakePedalApplied 1 "press(( 制动踏板未被踩下)" 0 "no_press(( 制动踏板未被踩下)" ;
+VAL_ 486 BDCS6_FrontWiperSts 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "High" 1 "Low" 0 "OFF" ;
+VAL_ 486 BDCS6_FrontWiperParkPos 1 "Park" 0 "Not_park" ;
+VAL_ 272 BDCS1_PowerMode 3 "Crank" 2 "ON" 1 "ACC" 0 "OFF" ;
+VAL_ 196 ACU2_VehicleDynYawRateV 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 196 ACU2_LongAccSensorValueV 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 196 ACU2_LatAccSensorValueV 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 199 IDB4_RRWhlVelocityValid 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 199 IDB4_RLWhlVelocityValid 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 199 IDB4_FRWhlVelocityValid 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 199 IDB4_FLWhlVelocityValid 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 197 IDB3_VehicleSpdValid 1 "Valid(有效)" 0 "Invalid(无效)" ;
+VAL_ 177 EPS1_SteeringAngleValid 1 "Valid" 0 "Invalid" ;
+VAL_ 177 EPS1_SteerAngleSpdValid 1 "Valid" 0 "Invalid" ;
+VAL_ 227 VCU5_ActGearValid 1 "Valid" 0 "Invalid" ;
+VAL_ 227 VCU5_ActGear 7 "Invalid" 6 "Description for the value '0x6'" 5 "S" 4 "Drive" 3 "Neutral" 2 "Reverse" 1 "Park" 0 "Default" ;
+VAL_ 856 SRR_FL_ObjMtnPat_16 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 856 SRR_FL_ObjTyp_16 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 856 SRR_FL_ObjTyp_15 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 856 SRR_FL_ObjMtnPat_15 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 855 SRR_FL_ObjMtnPat_14 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 855 SRR_FL_ObjTyp_14 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 855 SRR_FL_ObjTyp_13 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 855 SRR_FL_ObjMtnPat_13 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 854 SRR_FL_ObjMtnPat_12 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 854 SRR_FL_ObjTyp_12 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 854 SRR_FL_ObjTyp_11 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 854 SRR_FL_ObjMtnPat_11 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 853 SRR_FL_ObjMtnPat_10 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 853 SRR_FL_ObjTyp_10 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 853 SRR_FL_ObjTyp_9 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 853 SRR_FL_ObjMtnPat_9 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 849 SRR_FL_ObjMtnPat_2 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 849 SRR_FL_ObjTyp_2 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 849 SRR_FL_ObjTyp_1 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 849 SRR_FL_ObjMtnPat_1 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 850 SRR_FL_ObjMtnPat_4 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 850 SRR_FL_ObjTyp_4 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 850 SRR_FL_ObjTyp_3 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 850 SRR_FL_ObjMtnPat_3 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 851 SRR_FL_ObjMtnPat_6 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 851 SRR_FL_ObjTyp_6 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 851 SRR_FL_ObjTyp_5 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 851 SRR_FL_ObjMtnPat_5 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 852 SRR_FL_ObjMtnPat_8 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 852 SRR_FL_ObjTyp_8 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 852 SRR_FL_ObjMtnPat_7 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 852 SRR_FL_ObjTyp_7 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 824 SRR_FR_ObjMtnPat_16 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 824 SRR_FR_ObjTyp_16 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 824 SRR_FR_ObjTyp_15 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 824 SRR_FR_ObjMtnPat_15 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 823 SRR_FR_ObjMtnPat_14 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 823 SRR_FR_ObjTyp_14 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 823 SRR_FR_ObjTyp_13 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 823 SRR_FR_ObjMtnPat_13 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 822 SRR_FR_ObjMtnPat_12 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 822 SRR_FR_ObjTyp_12 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 822 SRR_FR_ObjTyp_11 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 822 SRR_FR_ObjMtnPat_11 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 821 SRR_FR_ObjMtnPat_10 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 821 SRR_FR_ObjTyp_10 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 821 SRR_FR_ObjTyp_9 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 821 SRR_FR_ObjMtnPat_9 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 817 SRR_FR_ObjMtnPat_2 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 817 SRR_FR_ObjTyp_2 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 817 SRR_FR_ObjTyp_1 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 817 SRR_FR_ObjMtnPat_1 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 818 SRR_FR_ObjMtnPat_4 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 818 SRR_FR_ObjTyp_4 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 818 SRR_FR_ObjTyp_3 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 818 SRR_FR_ObjMtnPat_3 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 819 SRR_FR_ObjMtnPat_6 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 819 SRR_FR_ObjTyp_6 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 819 SRR_FR_ObjTyp_5 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 819 SRR_FR_ObjMtnPat_5 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 820 SRR_FR_ObjMtnPat_8 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 820 SRR_FR_ObjTyp_8 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+VAL_ 820 SRR_FR_ObjMtnPat_7 3 "staty" 2 "moving" 1 "StatyFromMovg" 0 "unknown" ;
+VAL_ 820 SRR_FR_ObjTyp_7 3 "Vehicle" 2 "Bicycle" 1 "pedestrian" 0 "unknown" ;
+

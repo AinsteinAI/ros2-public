@@ -1,0 +1,16 @@
+std_msgs/Header header
+uint64 crc 
+uint32 length
+uint32 sqc
+uint32 data_id
+uint32 frame_count
+uint8[3] protocol_version
+uint8[4] hw_pcb_ver
+uint8[4] hw_bom_ver
+uint8[4] cfg_version
+uint8[4] sw_pl_ver
+uint8[4] sw_ps_ver
+uint8[3] alg_pt_ver
+uint8[3] alg_trk_ver
+uint8[3] calib_ver
+uint8[16] sn_shell

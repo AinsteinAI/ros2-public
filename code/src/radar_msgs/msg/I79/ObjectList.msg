@@ -1,0 +1,16 @@
+std_msgs/Header header
+uint64 crc
+uint32 length
+uint32 sqc
+uint32 dataid
+uint32 timestamp_nanoseconds
+uint32 timestamp_seconds
+uint8 timestamp_syncstatus
+uint32 rsv1
+uint8 rsv2 
+uint32 frame_count
+uint8 coordinate_system
+float32 measurement_latency 
+uint8[32] rsv3
+uint8 objectlist_numofobjects
+radar_msgs/Object[] objectlist_objects

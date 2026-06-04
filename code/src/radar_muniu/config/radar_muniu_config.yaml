@@ -1,0 +1,114 @@
+# radar_muniu_config.yaml
+# Configuration file for Radar Muniu Node
+
+radar_muniu:
+  ros__parameters:
+    # === Radar 0 Configuration (UDP Protocol - I79 Radar) ===
+    # radar0:
+    #   # Network Communication Configuration
+    #   local_ip: "10.0.0.75"               # Local listening IP address
+    #   local_port: 30510                   # Local device port
+    #   remote_ip: "10.0.0.10"              # Radar device IP address
+    #   remote_port: 30490                  # Radar device port
+    #   # Coordinate Transformation Parameters
+    #   install_x: 0.0                      # X-axis offset (meter)
+    #   install_y: 0.0                      # Y-axis offset (meter) 
+    #   install_z: 0.0                      # Z-axis offset (meter)
+    #   install_roll: 0.0                   # Roll angle (radian)
+    #   install_pitch: 0.0                  # Pitch angle (radian)
+    #   install_yaw: 0.0                    # Yaw angle (radian)
+    #   # Data Service Configuration
+    #   service: [0x200C, 0x300C, 0x700C]   # Subscribed data service types
+    #   # Radar Identification Configuration
+    #   radar_id: "radar_muniu_i79"         # Unique radar identifier (used for topic name generation)
+    #   direct: "front"                     # Radar mounting direction
+    #   # Coordinate System Configuration
+    #   frame_id: "muniu_i79_link"          # Radar local coordinate system ID
+    #   parent_frame_id: "base_link"        # Parent coordinate system (usually robot base coordinate system)
+    #   # Communication Protocol
+    #   protocol: "udp"                     # Communication protocol type
+    #   vsomeip_config: "vsomeip.json"      # vsomeip configuration file path
+
+    # === Radar 1 Configuration (CAN Protocol - K77 Radar) ===
+    # radar1:
+    #   # Radar Identification Configuration
+    #   radar_id: "radar_muniu_k77"         # Unique radar identifier 
+    #   # Mounting Direction                              
+    #   direct: "front"                     # Radar mounting direction
+    #   # Coordinate System Configuration
+    #   frame_id: "muniu_k77_link"          # Radar local coordinate system ID
+    #   parent_frame_id: "base_link"        # Parent coordinate system
+    #   # Coordinate Transformation Parameters
+    #   install_x: 0.0                      # X-axis offset (meter)
+    #   install_y: 0.0                      # Y-axis offset (meter) 
+    #   install_z: 0.0                      # Z-axis offset (meter)
+    #   install_roll: 0.0                   # Roll angle (radian)
+    #   install_pitch: 0.0                  # Pitch angle (radian)
+    #   install_yaw: 0.0                    # Yaw angle (radian)
+    #   # Communication Protocol
+    #   protocol: "can"                     # Communication protocol type
+    #   # CAN Device Configuration
+    #   device: "pcan"                      # CAN device type (pcan or others)
+    #   channel: 1                          # CAN channel number
+    #   arb_bitrate: 500                    # Arbitration bitrate (kbps)
+    #   data_bitrate: 2000                  # Data bitrate (kbps)
+    #   # DBC File Configuration
+    #   dbc_file: "K77_G2_ObjectCAN_Common.dbc"  # CAN database file path
+    #   parse_rule:
+    #     begin_message: [0x501]  # Frame start CAN message ID
+    #     end_message: [0x80]     # Frame end CAN message ID
+    #     obj_idx_pos: 2          # Position of target sequence number in object message signal  
+    #                             # e.g., FRS_Obj_29_Part2of2 - position of 29 is 2
+    #     object_message: [0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x26, 0x27,
+    #                      0x28, 0x29, 0x2A, 0x2B, 0x2C, 0x2D, 0x2E, 0x2F,
+    #                      0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37,
+    #                      0x38, 0x39, 0x3A, 0x3B, 0x3C, 0x3D, 0x3E, 0x3F,
+    #                      0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47,
+    #                      0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57,
+    #                      0x58, 0x59, 0x5A, 0x5B, 0x5C, 0x5D, 0x5E, 0x5F,
+    #                      0x60, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66, 0x67,
+    #                      0x68, 0x69, 0x6A, 0x6B, 0x6C, 0x6D, 0x6E, 0x6F,
+    #                      0x70, 0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77]  # All object message IDs
+    #     id_signal: "_Obj_ID"      # Target ID identifier in DBC signal
+    #     x_signal: "_Obj_XPos"     # Target X coordinate identifier in DBC signal
+    #     y_signal: "_Obj_YPos"     # Target Y coordinate identifier in DBC signal
+    #     valid_signal: "ValidFlag" # Target validity flag identifier in DBC signal
+    #     exist_signal: "_ExstProb" # Target existence probability identifier in DBC signal
+
+    # === Radar 2 Configuration (CAN Protocol - T79 Radar) ===
+    radar2:
+      # Radar Identification Configuration
+      radar_id: "radar_muniu_t79"     # Unique radar identifier
+      # Mounting Direction 
+      direct: "rl"                    # Radar mounting direction (rl = rear left)
+      # Coordinate System Configuration
+      frame_id: "muniu_t79_link"      # Radar local coordinate system ID
+      parent_frame_id: "base_link"    # Parent coordinate system
+      # Coordinate Transformation Parameters
+      install_x: 0.0                  # X-axis offset (meter)
+      install_y: 0.0                  # Y-axis offset (meter) 
+      install_z: 0.0                  # Z-axis offset (meter)
+      install_roll: 0.0               # Roll angle (radian)
+      install_pitch: 0.0              # Pitch angle (radian)
+      install_yaw: 0.0                # Yaw angle (radian)
+      # Communication Protocol
+      protocol: "can"                 # Communication protocol type
+      # CAN Device Configuration
+      device: "pcan"                  # CAN device type (pcan or others)
+      channel: 1                      # CAN channel number
+      arb_bitrate: 500                # Arbitration bitrate (kbps)
+      data_bitrate: 2000              # Data bitrate (kbps)
+      # DBC File Configuration
+      dbc_file: "AFD2_RCR-DebugInfo+BK+SSTK.dbc"  # CAN database file path
+      # Frame Parsing Rules
+      parse_rule:
+        begin_message: [0x300]        # Frame start CAN message ID
+        end_message: [0x308]          # Frame end CAN message ID
+        obj_idx_pos: 3                # Position of target sequence number in object message signal  
+                                      # e.g., SRR_FL_ObjConf_29 - position of 29 is 3
+        object_message: [0x301, 0x302, 0x303, 0x304, 0x305, 0x306, 0x307, 0x308] # All object message IDs
+        id_signal: "_ObjID_"          # Target ID identifier in DBC signal            
+        x_signal: "_ObjDistX_"        # Target X coordinate (distance) identifier in DBC signal
+        y_signal: "_ObjDistY_"        # Target Y coordinate (distance) identifier in DBC signal
+        valid_signal: ""              # Target validity flag identifier in DBC signal (unused)
+        exist_signal: "_ObjConf_"     # Target existence probability (confidence) identifier in DBC signal

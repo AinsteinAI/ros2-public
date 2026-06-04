@@ -1,0 +1,38 @@
+{
+  "unicast": "10.0.0.75",
+  "netmask": "255.0.0.0",
+  "device": "以太网",
+  "logging": {
+    "level": "debug",
+    "console": true,
+    "file": { "enable": false }
+  },
+  "applications": [
+    {
+      "name": "radar-client",
+      "id": "0x0001"
+    }
+  ],
+  "routing": "radar-client",
+  "service-discovery": {
+    "enable": true,              
+    "multicast": "224.0.2.14", 
+    "port": 30490, 
+        "protocol" : "udp",
+        "initial_delay_min" : "10",
+        "initial_delay_max" : "100",
+        "repetitions_base_delay" : "200",
+        "repetitions_max" : "3",
+        "ttl" : "3600000",
+        "cyclic_offer_delay" : "2000",
+        "request_response_delay" : "1500"
+  },    
+  "remote-services": [
+    { "service": "0x200c", "instance": "0x200c", "unreliable": "10.0.0.10:30510"},
+    { "service": "0x300c", "instance": "0x200c", "unreliable": "10.0.0.10:42101" },
+    { "service": "0x400c", "instance": "0x200c", "unreliable": "10.0.0.10:42102" },
+    { "service": "0x500c", "instance": "0x200c", "unreliable": "10.0.0.10:42103" },
+    { "service": "0x600c", "instance": "0x200c", "unreliable": "10.0.0.10:42104" },
+    { "service": "0x700c", "instance": "0x200c", "unreliable": "10.0.0.10:42105" }
+  ]
+}
